@@ -15,7 +15,7 @@
 
 local library = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SkidoLOL/ArsenalScript/main/Arsenal%20Script/Ui%20Lib/Shadow%20Lib.lua"))()
 
-local Main = library:CreateWindow("hackv1","Crimson")
+local Main = library:CreateWindow("NgMinhAnh","UyVu")
 
 local tab = Main:CreateTab("Main")
 local tab2 = Main:CreateTab("Visuals")
@@ -132,4 +132,5 @@ Button1 = "o0o0o0o",
 Button1 = "tận hưởng nhé",
 Duration = 30 
 })
+
 
