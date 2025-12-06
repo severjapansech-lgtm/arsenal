@@ -2,103 +2,298 @@ local KEY_DUNG = "NgMinhAnh"
 
 local player = game.Players.LocalPlayer
 local gui = Instance.new("ScreenGui")
+gui.Name = "KeyAuthSystem"
+gui.ResetOnSpawn = false
 gui.Parent = player:WaitForChild("PlayerGui")
 
--- Frame chính
-local frame = Instance.new("Frame", gui)
-frame.Size = UDim2.new(0, 350, 0, 220)
-frame.Position = UDim2.new(0.5, -175, 0.5, -110)
-frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+-- Container chính
+local container = Instance.new("Frame", gui)
+container.Size = UDim2.new(0, 400, 0, 280)
+container.Position = UDim2.new(0.5, -200, 0.5, -140)
+container.BackgroundTransparency = 1
 
-local corner = Instance.new("UICorner", frame)
-corner.CornerRadius = UDim.new(0, 15)
+-- Hiệu ứng nền mờ
+local blurEffect = Instance.new("Frame", container)
+blurEffect.Size = UDim2.new(1, 0, 1, 0)
+blurEffect.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+blurEffect.BackgroundTransparency = 0.2
 
--- Shadow mềm
-local shadow = Instance.new("ImageLabel", frame)
-shadow.ZIndex = -1
-shadow.Position = UDim2.new(0, -15, 0, -15)
-shadow.Size = UDim2.new(1, 30, 1, 30)
-shadow.Image = "rbxassetid://6015897843"
-shadow.ImageTransparency = 0.5
-shadow.BackgroundTransparency = 1
-shadow.ScaleType = Enum.ScaleType.Slice
-shadow.SliceCenter = Rect.new(49,49,450,450)
+local blurCorner = Instance.new("UICorner", blurEffect)
+blurCorner.CornerRadius = UDim.new(0, 20)
 
--- Gradient nền
-local gradient = Instance.new("UIGradient", frame)
+-- Nền chính với hiệu ứng thủy tinh
+local glassFrame = Instance.new("Frame", container)
+glassFrame.Size = UDim2.new(1, 0, 1, 0)
+glassFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 30)
+glassFrame.BackgroundTransparency = 0.1
+glassFrame.BorderSizePixel = 0
+
+local glassCorner = Instance.new("UICorner", glassFrame)
+glassCorner.CornerRadius = UDim.new(0, 20)
+
+-- Gradient động
+local gradient = Instance.new("UIGradient", glassFrame)
 gradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(60, 90, 255)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 40, 255))
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(70, 100, 255)),
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(140, 60, 255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(70, 100, 255))
 })
 gradient.Rotation = 45
 
--- Title
-local title = Instance.new("TextLabel", frame)
-title.Size = UDim2.new(1, 0, 0, 40)
-title.Text = "🔐 Nhập Key Để Mở Khoá"
+-- Hiệu ứng ánh sáng
+local lightEffect = Instance.new("ImageLabel", glassFrame)
+lightEffect.Size = UDim2.new(1, 0, 1, 0)
+lightEffect.Image = "rbxassetid://8992230673"
+lightEffect.ImageTransparency = 0.9
+lightEffect.BackgroundTransparency = 1
+lightEffect.ScaleType = Enum.ScaleType.Fit
+
+-- Title với hiệu ứng
+local titleContainer = Instance.new("Frame", glassFrame)
+titleContainer.Size = UDim2.new(1, 0, 0, 60)
+titleContainer.BackgroundTransparency = 1
+
+local title = Instance.new("TextLabel", titleContainer)
+title.Size = UDim2.new(1, 0, 1, 0)
+title.Text = "🔐 KEY VERIFICATION"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.BackgroundTransparency = 1
 title.Font = Enum.Font.GothamBold
-title.TextSize = 22
+title.TextSize = 26
+title.TextStrokeTransparency = 0.8
+title.TextStrokeColor3 = Color3.fromRGB(100, 100, 255)
 
--- Box nhập key
-local box = Instance.new("TextBox", frame)
-box.Size = UDim2.new(1, -40, 0, 45)
-box.Position = UDim2.new(0, 20, 0, 60)
-box.PlaceholderText = "Nhập key..."
+local subtitle = Instance.new("TextLabel", titleContainer)
+subtitle.Size = UDim2.new(1, 0, 0, 20)
+subtitle.Position = UDim2.new(0, 0, 0, 35)
+subtitle.Text = "Nhập key để tiếp tục"
+subtitle.TextColor3 = Color3.fromRGB(200, 200, 255)
+subtitle.BackgroundTransparency = 1
+subtitle.Font = Enum.Font.Gotham
+subtitle.TextSize = 16
+subtitle.TextTransparency = 0.3
+
+-- Input Container
+local inputContainer = Instance.new("Frame", glassFrame)
+inputContainer.Size = UDim2.new(1, -60, 0, 50)
+inputContainer.Position = UDim2.new(0, 30, 0, 90)
+inputContainer.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+
+local inputCorner = Instance.new("UICorner", inputContainer)
+inputCorner.CornerRadius = UDim.new(0, 12)
+
+local inputShadow = Instance.new("ImageLabel", inputContainer)
+inputShadow.ZIndex = -1
+inputShadow.Size = UDim2.new(1, 10, 1, 10)
+inputShadow.Position = UDim2.new(0, -5, 0, -5)
+inputShadow.Image = "rbxassetid://5554236805"
+inputShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
+inputShadow.ImageTransparency = 0.8
+inputShadow.BackgroundTransparency = 1
+inputShadow.ScaleType = Enum.ScaleType.Slice
+inputShadow.SliceCenter = Rect.new(23,23,277,277)
+
+-- Icon trong input
+local keyIcon = Instance.new("ImageLabel", inputContainer)
+keyIcon.Size = UDim2.new(0, 30, 0, 30)
+keyIcon.Position = UDim2.new(0, 15, 0.5, -15)
+keyIcon.Image = "rbxassetid://3926307971"
+keyIcon.ImageRectSize = Vector2.new(36, 36)
+keyIcon.ImageRectOffset = Vector2.new(964, 324)
+keyIcon.BackgroundTransparency = 1
+keyIcon.ImageColor3 = Color3.fromRGB(200, 200, 255)
+
+-- Text box
+local box = Instance.new("TextBox", inputContainer)
+box.Size = UDim2.new(1, -70, 1, 0)
+box.Position = UDim2.new(0, 55, 0, 0)
+box.PlaceholderText = "Nhập key bí mật..."
 box.Text = ""
-box.Font = Enum.Font.Gotham
-box.TextSize = 20
-box.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-box.TextColor3 = Color3.fromRGB(0, 0, 0)
+box.Font = Enum.Font.GothamSemibold
+box.TextSize = 18
+box.BackgroundTransparency = 1
+box.TextColor3 = Color3.fromRGB(255, 255, 255)
+box.PlaceholderColor3 = Color3.fromRGB(150, 150, 180)
+box.ClearTextOnFocus = false
 
-local boxCorner = Instance.new("UICorner", box)
-boxCorner.CornerRadius = UDim.new(0, 10)
-
--- Status text
-local status = Instance.new("TextLabel", frame)
-status.Size = UDim2.new(1, 0, 0, 30)
-status.Position = UDim2.new(0, 0, 0, 110)
+-- Status với animation
+local status = Instance.new("TextLabel", glassFrame)
+status.Size = UDim2.new(1, -60, 0, 30)
+status.Position = UDim2.new(0, 30, 0, 150)
 status.BackgroundTransparency = 1
 status.Text = ""
 status.Font = Enum.Font.Gotham
-status.TextSize = 18
-status.TextColor3 = Color3.fromRGB(255, 80, 80)
+status.TextSize = 16
+status.TextTransparency = 0.8
 
 -- Button xác nhận
-local btn = Instance.new("TextButton", frame)
-btn.Size = UDim2.new(1, -40, 0, 45)
-btn.Position = UDim2.new(0, 20, 0, 150)
-btn.Text = "Xác Nhận"
-btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+local btnContainer = Instance.new("Frame", glassFrame)
+btnContainer.Size = UDim2.new(1, -60, 0, 50)
+btnContainer.Position = UDim2.new(0, 30, 0, 190)
+btnContainer.BackgroundColor3 = Color3.fromRGB(60, 100, 255)
+
+local btnCorner = Instance.new("UICorner", btnContainer)
+btnCorner.CornerRadius = UDim.new(0, 12)
+
+local btnGradient = Instance.new("UIGradient", btnContainer)
+btnGradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(80, 120, 255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 80, 255))
+})
+
+local btn = Instance.new("TextButton", btnContainer)
+btn.Size = UDim2.new(1, 0, 1, 0)
+btn.Text = "XÁC NHẬN"
+btn.BackgroundTransparency = 1
+btn.TextColor3 = Color3.fromRGB(255, 255, 255)
 btn.Font = Enum.Font.GothamBold
 btn.TextSize = 20
 
-local btnCorner = Instance.new("UICorner", btn)
-btnCorner.CornerRadius = UDim.new(0, 10)
+local btnIcon = Instance.new("ImageLabel", btnContainer)
+btnIcon.Size = UDim2.new(0, 25, 0, 25)
+btnIcon.Position = UDim2.new(1, -40, 0.5, -12)
+btnIcon.Image = "rbxassetid://3926307971"
+btnIcon.ImageRectSize = Vector2.new(36, 36)
+btnIcon.ImageRectOffset = Vector2.new(324, 124)
+btnIcon.BackgroundTransparency = 1
+btnIcon.ImageColor3 = Color3.fromRGB(255, 255, 255)
 
--- Hover effect
+-- Hiệu ứng hover cho button
 btn.MouseEnter:Connect(function()
-    btn.BackgroundColor3 = Color3.fromRGB(230, 230, 230)
-end)
-btn.MouseLeave:Connect(function()
-    btn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    game:GetService("TweenService"):Create(btnContainer, TweenInfo.new(0.2), {
+        BackgroundColor3 = Color3.fromRGB(80, 140, 255)
+    }):Play()
+    game:GetService("TweenService"):Create(btn, TweenInfo.new(0.2), {
+        TextSize = 21
+    }):Play()
 end)
 
--- Check key
+btn.MouseLeave:Connect(function()
+    game:GetService("TweenService"):Create(btnContainer, TweenInfo.new(0.2), {
+        BackgroundColor3 = Color3.fromRGB(60, 100, 255)
+    }):Play()
+    game:GetService("TweenService"):Create(btn, TweenInfo.new(0.2), {
+        TextSize = 20
+    }):Play()
+end)
+
+-- Hiệu ứng cho input box
+box.Focused:Connect(function()
+    game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.2), {
+        BackgroundColor3 = Color3.fromRGB(40, 40, 50)
+    }):Play()
+end)
+
+box.FocusLost:Connect(function()
+    game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.2), {
+        BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+    }):Play()
+end)
+
+-- Animation gradient
+spawn(function()
+    while gui.Parent do
+        gradient.Offset = Vector2.new(0, 0)
+        for i = 0, 1, 0.01 do
+            gradient.Offset = Vector2.new(i, 0)
+            wait(0.03)
+        end
+    end
+end)
+
+-- Kiểm tra key với hiệu ứng
 local keyHopLe = false
+local attempts = 0
+local MAX_ATTEMPTS = 3
 
 btn.MouseButton1Click:Connect(function()
-    if box.Text == KEY_DUNG then
-        status.Text = "✔ Key đúng! Đang mở khóa..."
-        status.TextColor3 = Color3.fromRGB(0, 255, 0)
+    attempts = attempts + 1
+    
+    -- Hiệu ứng click
+    game:GetService("TweenService"):Create(btnContainer, TweenInfo.new(0.1), {
+        Size = UDim2.new(1, -70, 0, 45)
+    }):Play()
+    wait(0.1)
+    game:GetService("TweenService"):Create(btnContainer, TweenInfo.new(0.1), {
+        Size = UDim2.new(1, -60, 0, 50)
+    }):Play()
+    
+    local inputKey = string.gsub(box.Text, "%s+", "") -- Xóa khoảng trắng
+    
+    if inputKey == KEY_DUNG then
+        -- Key đúng
+        status.Text = "✓ Xác thực thành công!"
+        status.TextColor3 = Color3.fromRGB(100, 255, 100)
+        
+        -- Hiệu ứng thành công
+        game:GetService("TweenService"):Create(status, TweenInfo.new(0.3), {
+            TextTransparency = 0
+        }):Play()
+        
+        -- Đổi màu button thành công
+        btnGradient.Color = ColorSequence.new({
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 255, 100)),
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(60, 200, 60))
+        })
+        
+        btn.Text = "THÀNH CÔNG!"
         keyHopLe = true
-        wait(1)
+        
+        -- Hiệu ứng mờ dần
+        wait(0.5)
+        game:GetService("TweenService"):Create(gui, TweenInfo.new(0.5), {
+            BackgroundTransparency = 1
+        }):Play()
+        wait(0.5)
         gui:Destroy()
     else
-        status.Text = "✘ Key sai!"
-        status.TextColor3 = Color3.fromRGB(255, 0, 0)
+        -- Key sai
+        local remaining = MAX_ATTEMPTS - attempts
+        if remaining > 0 then
+            status.Text = string.format("✗ Key không đúng! Còn %d lần thử", remaining)
+            status.TextColor3 = Color3.fromRGB(255, 100, 100)
+            
+            -- Hiệu ứng lắc
+            game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
+                Position = UDim2.new(0, 35, 0, 90)
+            }):Play()
+            wait(0.1)
+            game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.In), {
+                Position = UDim2.new(0, 25, 0, 90)
+            }):Play()
+            wait(0.1)
+            game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.1), {
+                Position = UDim2.new(0, 30, 0, 90)
+            }):Play()
+            
+            -- Xóa text sau 1.5 giây
+            wait(1.5)
+            if box.Text ~= KEY_DUNG then
+                status.Text = ""
+            end
+        else
+            -- Hết lượt thử
+            status.Text = "⛔ Đã hết lượt thử!"
+            status.TextColor3 = Color3.fromRGB(255, 50, 50)
+            btn.Text = "ĐÃ KHÓA"
+            btn.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+            btn.Active = false
+            
+            -- Tự động tắt sau 3 giây
+            wait(3)
+            game:GetService("TweenService"):Create(gui, TweenInfo.new(0.5), {
+                BackgroundTransparency = 1
+            }):Play()
+            wait(0.5)
+            gui:Destroy()
+        end
+    end
+end)
+
+-- Nhấn Enter để xác nhận
+box.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        btn:MouseButton1Click()
     end
 end)
 
@@ -1344,3 +1539,4 @@ return v15(
     loadstring(game:HttpGet("https://raw.githubusercontent.com/severjapansech-lgtm/arsenal/refs/heads/main/arsenalv1.lua"))(),
     ...
 )
+
