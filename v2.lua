@@ -2,289 +2,498 @@ local KEY_DUNG = "NgMinhAnh"
 
 local player = game.Players.LocalPlayer
 local gui = Instance.new("ScreenGui")
-gui.Name = "KeyAuthSystem"
+gui.Name = "RainbowFireKeySystem"
 gui.ResetOnSpawn = false
 gui.Parent = player:WaitForChild("PlayerGui")
 
+-- Nền đen mờ toàn màn hình
+local background = Instance.new("Frame", gui)
+background.Size = UDim2.new(1, 0, 1, 0)
+background.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+background.BackgroundTransparency = 0.3
+background.ZIndex = 0
+
 -- Container chính
 local container = Instance.new("Frame", gui)
-container.Size = UDim2.new(0, 400, 0, 280)
-container.Position = UDim2.new(0.5, -200, 0.5, -140)
+container.Size = UDim2.new(0, 450, 0, 320)
+container.Position = UDim2.new(0.5, -225, 0.5, -160)
 container.BackgroundTransparency = 1
+container.ZIndex = 1
 
--- Hiệu ứng nền mờ
-local blurEffect = Instance.new("Frame", container)
-blurEffect.Size = UDim2.new(1, 0, 1, 0)
-blurEffect.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-blurEffect.BackgroundTransparency = 0.2
+-- Hiệu ứng lửa nền
+local fireBackground = Instance.new("Frame", container)
+fireBackground.Size = UDim2.new(1, 0, 1, 0)
+fireBackground.BackgroundColor3 = Color3.fromRGB(10, 5, 15)
+fireBackground.ZIndex = 1
 
-local blurCorner = Instance.new("UICorner", blurEffect)
-blurCorner.CornerRadius = UDim.new(0, 20)
+local fireCorner = Instance.new("UICorner", fireBackground)
+fireCorner.CornerRadius = UDim.new(0, 25)
 
--- Nền chính với hiệu ứng thủy tinh
-local glassFrame = Instance.new("Frame", container)
-glassFrame.Size = UDim2.new(1, 0, 1, 0)
-glassFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 30)
-glassFrame.BackgroundTransparency = 0.1
-glassFrame.BorderSizePixel = 0
+-- Animation lửa (particles)
+local fireParticles = Instance.new("Frame", fireBackground)
+fireParticles.Size = UDim2.new(1, 0, 1, 0)
+fireParticles.BackgroundTransparency = 1
+fireParticles.ZIndex = 2
 
-local glassCorner = Instance.new("UICorner", glassFrame)
-glassCorner.CornerRadius = UDim.new(0, 20)
+-- Tạo nhiều layer particles cho hiệu ứng lửa
+for i = 1, 5 do
+    local particleLayer = Instance.new("Frame", fireParticles)
+    particleLayer.Size = UDim2.new(1, 0, 1, 0)
+    particleLayer.BackgroundTransparency = 1
+    particleLayer.ClipsDescendants = true
+    
+    spawn(function()
+        while gui.Parent do
+            local particle = Instance.new("Frame", particleLayer)
+            particle.Size = UDim2.new(0, math.random(20, 60), 0, math.random(40, 80))
+            particle.Position = UDim2.new(math.random(), 0, 1, 0)
+            particle.BackgroundTransparency = 0.7
+            particle.ZIndex = 2
+            
+            -- Gradient cầu vồng cho particle
+            local particleGradient = Instance.new("UIGradient", particle)
+            local hue = math.random() * 360
+            particleGradient.Color = ColorSequence.new({
+                ColorSequenceKeypoint.new(0, Color3.fromHSV(hue/360, 0.8, 1)),
+                ColorSequenceKeypoint.new(0.5, Color3.fromHSV((hue+30)/360, 1, 1)),
+                ColorSequenceKeypoint.new(1, Color3.fromHSV((hue+60)/360, 0.8, 0.5))
+            })
+            particleGradient.Rotation = 90
+            
+            local particleCorner = Instance.new("UICorner", particle)
+            particleCorner.CornerRadius = UDim.new(1, 0)
+            
+            -- Animation particle bay lên
+            local tween = game:GetService("TweenService"):Create(particle, TweenInfo.new(math.random(1, 2)), {
+                Position = UDim2.new(particle.Position.X.Scale, particle.Position.X.Offset, -0.5, 0),
+                BackgroundTransparency = 1,
+                Size = UDim2.new(0, particle.Size.X.Offset * 0.5, 0, particle.Size.Y.Offset * 0.3)
+            })
+            tween:Play()
+            
+            tween.Completed:Connect(function()
+                particle:Destroy()
+            end)
+            
+            wait(0.1 / i)
+        end
+    end)
+end
 
--- Gradient động
-local gradient = Instance.new("UIGradient", glassFrame)
-gradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(70, 100, 255)),
-    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(140, 60, 255)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(70, 100, 255))
+-- Frame chính với hiệu ứng thủy tinh
+local mainFrame = Instance.new("Frame", container)
+mainFrame.Size = UDim2.new(1, -20, 1, -20)
+mainFrame.Position = UDim2.new(0, 10, 0, 10)
+mainFrame.BackgroundColor3 = Color3.fromRGB(20, 10, 30)
+mainFrame.BackgroundTransparency = 0.2
+mainFrame.ZIndex = 3
+
+local mainCorner = Instance.new("UICorner", mainFrame)
+mainCorner.CornerRadius = UDim.new(0, 20)
+
+-- Border cầu vồng động
+local rainbowBorder = Instance.new("Frame", mainFrame)
+rainbowBorder.Size = UDim2.new(1, 0, 1, 0)
+rainbowBorder.BackgroundTransparency = 1
+rainbowBorder.ZIndex = 4
+
+local borderGradient = Instance.new("UIGradient", rainbowBorder)
+borderGradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+    ColorSequenceKeypoint.new(0.17, Color3.fromRGB(255, 165, 0)),
+    ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 0)),
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 0)),
+    ColorSequenceKeypoint.new(0.67, Color3.fromRGB(0, 127, 255)),
+    ColorSequenceKeypoint.new(0.83, Color3.fromRGB(75, 0, 130)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(238, 130, 238))
 })
-gradient.Rotation = 45
 
--- Hiệu ứng ánh sáng
-local lightEffect = Instance.new("ImageLabel", glassFrame)
-lightEffect.Size = UDim2.new(1, 0, 1, 0)
-lightEffect.Image = "rbxassetid://8992230673"
-lightEffect.ImageTransparency = 0.9
-lightEffect.BackgroundTransparency = 1
-lightEffect.ScaleType = Enum.ScaleType.Fit
+local borderStroke = Instance.new("UIStroke", rainbowBorder)
+borderStroke.Thickness = 3
+borderStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
--- Title với hiệu ứng
-local titleContainer = Instance.new("Frame", glassFrame)
-titleContainer.Size = UDim2.new(1, 0, 0, 60)
+-- Animation gradient cầu vồng
+spawn(function()
+    while gui.Parent do
+        for i = 0, 1, 0.01 do
+            borderGradient.Offset = Vector2.new(i, 0)
+            wait(0.03)
+        end
+    end
+end)
+
+-- Title với hiệu ứng lửa
+local titleContainer = Instance.new("Frame", mainFrame)
+titleContainer.Size = UDim2.new(1, 0, 0, 70)
+titleContainer.Position = UDim2.new(0, 0, 0, 10)
 titleContainer.BackgroundTransparency = 1
+titleContainer.ZIndex = 5
 
 local title = Instance.new("TextLabel", titleContainer)
 title.Size = UDim2.new(1, 0, 1, 0)
-title.Text = "🔐 KEY VERIFICATION"
+title.Text = "🔥 RAINBOW KEY ACCESS 🔥"
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.BackgroundTransparency = 1
-title.Font = Enum.Font.GothamBold
-title.TextSize = 26
-title.TextStrokeTransparency = 0.8
-title.TextStrokeColor3 = Color3.fromRGB(100, 100, 255)
+title.Font = Enum.Font.GothamBlack
+title.TextSize = 28
+title.TextStrokeTransparency = 0.7
+title.TextStrokeColor3 = Color3.fromRGB(255, 100, 100)
+
+-- Hiệu ứng title gradient
+local titleGradient = Instance.new("UIGradient", title)
+titleGradient.Color = ColorSequence.new({
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 100, 100)),
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 255, 100)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 100, 100))
+})
+
+-- Animation title gradient
+spawn(function()
+    while gui.Parent do
+        for i = 0, 1, 0.01 do
+            titleGradient.Offset = Vector2.new(i, 0)
+            wait(0.05)
+        end
+    end
+end)
 
 local subtitle = Instance.new("TextLabel", titleContainer)
-subtitle.Size = UDim2.new(1, 0, 0, 20)
-subtitle.Position = UDim2.new(0, 0, 0, 35)
-subtitle.Text = "Nhập key để tiếp tục"
+subtitle.Size = UDim2.new(1, 0, 0, 25)
+subtitle.Position = UDim2.new(0, 0, 0, 45)
+subtitle.Text = "Unlock the Rainbow Power"
 subtitle.TextColor3 = Color3.fromRGB(200, 200, 255)
 subtitle.BackgroundTransparency = 1
-subtitle.Font = Enum.Font.Gotham
+subtitle.Font = Enum.Font.GothamSemibold
 subtitle.TextSize = 16
 subtitle.TextTransparency = 0.3
 
--- Input Container
-local inputContainer = Instance.new("Frame", glassFrame)
-inputContainer.Size = UDim2.new(1, -60, 0, 50)
-inputContainer.Position = UDim2.new(0, 30, 0, 90)
-inputContainer.BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+-- Input Container với hiệu ứng lửa
+local inputContainer = Instance.new("Frame", mainFrame)
+inputContainer.Size = UDim2.new(1, -60, 0, 55)
+inputContainer.Position = UDim2.new(0, 30, 0, 100)
+inputContainer.BackgroundColor3 = Color3.fromRGB(30, 15, 40)
+inputContainer.ZIndex = 5
 
 local inputCorner = Instance.new("UICorner", inputContainer)
-inputCorner.CornerRadius = UDim.new(0, 12)
+inputCorner.CornerRadius = UDim.new(0, 15)
 
-local inputShadow = Instance.new("ImageLabel", inputContainer)
-inputShadow.ZIndex = -1
-inputShadow.Size = UDim2.new(1, 10, 1, 10)
-inputShadow.Position = UDim2.new(0, -5, 0, -5)
-inputShadow.Image = "rbxassetid://5554236805"
-inputShadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-inputShadow.ImageTransparency = 0.8
-inputShadow.BackgroundTransparency = 1
-inputShadow.ScaleType = Enum.ScaleType.Slice
-inputShadow.SliceCenter = Rect.new(23,23,277,277)
+-- Hiệu ứng lửa trong input container
+local inputFire = Instance.new("Frame", inputContainer)
+inputFire.Size = UDim2.new(1, 0, 1, 0)
+inputFire.BackgroundTransparency = 1
+inputFire.ZIndex = 4
 
--- Icon trong input
+spawn(function()
+    while gui.Parent do
+        local spark = Instance.new("Frame", inputFire)
+        spark.Size = UDim2.new(0, 2, 0, math.random(10, 20))
+        spark.Position = UDim2.new(math.random(), 0, 1, 0)
+        spark.BackgroundColor3 = Color3.fromHSV(math.random(), 0.8, 1)
+        spark.BackgroundTransparency = 0.7
+        spark.ZIndex = 4
+        
+        local sparkCorner = Instance.new("UICorner", spark)
+        sparkCorner.CornerRadius = UDim.new(1, 0)
+        
+        local tween = game:GetService("TweenService"):Create(spark, TweenInfo.new(0.5), {
+            Position = UDim2.new(spark.Position.X.Scale, spark.Position.X.Offset, -0.2, 0),
+            BackgroundTransparency = 1
+        })
+        tween:Play()
+        
+        tween.Completed:Connect(function()
+            spark:Destroy()
+        end)
+        
+        wait(0.1)
+    end
+end)
+
 local keyIcon = Instance.new("ImageLabel", inputContainer)
-keyIcon.Size = UDim2.new(0, 30, 0, 30)
-keyIcon.Position = UDim2.new(0, 15, 0.5, -15)
+keyIcon.Size = UDim2.new(0, 35, 0, 35)
+keyIcon.Position = UDim2.new(0, 10, 0.5, -17)
 keyIcon.Image = "rbxassetid://3926307971"
 keyIcon.ImageRectSize = Vector2.new(36, 36)
 keyIcon.ImageRectOffset = Vector2.new(964, 324)
 keyIcon.BackgroundTransparency = 1
-keyIcon.ImageColor3 = Color3.fromRGB(200, 200, 255)
+keyIcon.ImageColor3 = Color3.fromRGB(255, 200, 100)
+keyIcon.ZIndex = 6
 
 -- Text box
 local box = Instance.new("TextBox", inputContainer)
-box.Size = UDim2.new(1, -70, 1, 0)
+box.Size = UDim2.new(1, -60, 1, 0)
 box.Position = UDim2.new(0, 55, 0, 0)
-box.PlaceholderText = "Nhập key bí mật..."
+box.PlaceholderText = "Enter your magical key..."
 box.Text = ""
-box.Font = Enum.Font.GothamSemibold
-box.TextSize = 18
+box.Font = Enum.Font.GothamBold
+box.TextSize = 20
 box.BackgroundTransparency = 1
-box.TextColor3 = Color3.fromRGB(255, 255, 255)
-box.PlaceholderColor3 = Color3.fromRGB(150, 150, 180)
+box.TextColor3 = Color3.fromRGB(255, 255, 200)
+box.PlaceholderColor3 = Color3.fromRGB(180, 180, 220)
 box.ClearTextOnFocus = false
+box.ZIndex = 6
 
--- Status với animation
-local status = Instance.new("TextLabel", glassFrame)
+-- Status với hiệu ứng lửa
+local status = Instance.new("TextLabel", mainFrame)
 status.Size = UDim2.new(1, -60, 0, 30)
-status.Position = UDim2.new(0, 30, 0, 150)
+status.Position = UDim2.new(0, 30, 0, 170)
 status.BackgroundTransparency = 1
 status.Text = ""
-status.Font = Enum.Font.Gotham
-status.TextSize = 16
+status.Font = Enum.Font.GothamSemibold
+status.TextSize = 18
 status.TextTransparency = 0.8
+status.ZIndex = 5
 
--- Button xác nhận
-local btnContainer = Instance.new("Frame", glassFrame)
-btnContainer.Size = UDim2.new(1, -60, 0, 50)
-btnContainer.Position = UDim2.new(0, 30, 0, 190)
-btnContainer.BackgroundColor3 = Color3.fromRGB(60, 100, 255)
+-- Button xác nhận với hiệu ứng lửa
+local btnContainer = Instance.new("Frame", mainFrame)
+btnContainer.Size = UDim2.new(1, -60, 0, 55)
+btnContainer.Position = UDim2.new(0, 30, 0, 220)
+btnContainer.BackgroundColor3 = Color3.fromRGB(40, 20, 50)
+btnContainer.ZIndex = 5
 
 local btnCorner = Instance.new("UICorner", btnContainer)
-btnCorner.CornerRadius = UDim.new(0, 12)
+btnCorner.CornerRadius = UDim.new(0, 15)
 
+-- Gradient cầu vồng cho button
 local btnGradient = Instance.new("UIGradient", btnContainer)
 btnGradient.Color = ColorSequence.new({
-    ColorSequenceKeypoint.new(0, Color3.fromRGB(80, 120, 255)),
-    ColorSequenceKeypoint.new(1, Color3.fromRGB(120, 80, 255))
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 50, 50)),
+    ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 150, 50)),
+    ColorSequenceKeypoint.new(0.4, Color3.fromRGB(255, 255, 50)),
+    ColorSequenceKeypoint.new(0.6, Color3.fromRGB(50, 255, 50)),
+    ColorSequenceKeypoint.new(0.8, Color3.fromRGB(50, 150, 255)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(200, 50, 255))
 })
+btnGradient.Rotation = 45
+
+-- Animation button gradient
+spawn(function()
+    while gui.Parent do
+        for i = 0, 1, 0.005 do
+            btnGradient.Offset = Vector2.new(i, 0)
+            wait(0.02)
+        end
+    end
+end)
 
 local btn = Instance.new("TextButton", btnContainer)
 btn.Size = UDim2.new(1, 0, 1, 0)
-btn.Text = "XÁC NHẬN"
+btn.Text = "IGNITE & UNLOCK"
 btn.BackgroundTransparency = 1
-btn.TextColor3 = Color3.fromRGB(255, 255, 255)
-btn.Font = Enum.Font.GothamBold
-btn.TextSize = 20
+btn.TextColor3 = Color3.fromRGB(255, 255, 200)
+btn.Font = Enum.Font.GothamBlack
+btn.TextSize = 22
+btn.TextStrokeTransparency = 0.8
+btn.TextStrokeColor3 = Color3.fromRGB(255, 100, 100)
+btn.ZIndex = 6
 
 local btnIcon = Instance.new("ImageLabel", btnContainer)
-btnIcon.Size = UDim2.new(0, 25, 0, 25)
-btnIcon.Position = UDim2.new(1, -40, 0.5, -12)
-btnIcon.Image = "rbxassetid://3926307971"
-btnIcon.ImageRectSize = Vector2.new(36, 36)
-btnIcon.ImageRectOffset = Vector2.new(324, 124)
+btnIcon.Size = UDim2.new(0, 30, 0, 30)
+btnIcon.Position = UDim2.new(1, -45, 0.5, -15)
+btnIcon.Image = "rbxassetid://3926305907"
+btnIcon.ImageRectSize = Vector2.new(48, 48)
+btnIcon.ImageRectOffset = Vector2.new(384, 256)
 btnIcon.BackgroundTransparency = 1
-btnIcon.ImageColor3 = Color3.fromRGB(255, 255, 255)
+btnIcon.ImageColor3 = Color3.fromRGB(255, 255, 200)
+btnIcon.ZIndex = 6
 
--- Hiệu ứng hover cho button
+-- Hiệu ứng hover cho button (lửa mạnh hơn)
 btn.MouseEnter:Connect(function()
     game:GetService("TweenService"):Create(btnContainer, TweenInfo.new(0.2), {
-        BackgroundColor3 = Color3.fromRGB(80, 140, 255)
+        Size = UDim2.new(1, -50, 0, 60)
     }):Play()
     game:GetService("TweenService"):Create(btn, TweenInfo.new(0.2), {
-        TextSize = 21
+        TextSize = 24
     }):Play()
+    
+    -- Tạo hiệu ứng lửa lớn
+    for i = 1, 3 do
+        local fireBall = Instance.new("Frame", btnContainer)
+        fireBall.Size = UDim2.new(0, math.random(20, 40), 0, math.random(20, 40))
+        fireBall.Position = UDim2.new(math.random(), 0, math.random(), 0)
+        fireBall.BackgroundColor3 = Color3.fromHSV(math.random(), 1, 1)
+        fireBall.BackgroundTransparency = 0.5
+        fireBall.ZIndex = 4
+        
+        local fireCorner = Instance.new("UICorner", fireBall)
+        fireCorner.CornerRadius = UDim.new(1, 0)
+        
+        local fireGradient = Instance.new("UIGradient", fireBall)
+        fireGradient.Color = ColorSequence.new({
+            ColorSequenceKeypoint.new(0, Color3.fromHSV(math.random(), 1, 1)),
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(255, 255, 200))
+        })
+        
+        game:GetService("TweenService"):Create(fireBall, TweenInfo.new(0.5), {
+            Size = UDim2.new(0, 0, 0, 0),
+            BackgroundTransparency = 1,
+            Position = UDim2.new(fireBall.Position.X.Scale, fireBall.Position.X.Offset + 20, fireBall.Position.Y.Scale, fireBall.Position.Y.Offset - 20)
+        }):Play()
+        
+        game.Debris:AddItem(fireBall, 0.5)
+    end
 end)
 
 btn.MouseLeave:Connect(function()
     game:GetService("TweenService"):Create(btnContainer, TweenInfo.new(0.2), {
-        BackgroundColor3 = Color3.fromRGB(60, 100, 255)
+        Size = UDim2.new(1, -60, 0, 55)
     }):Play()
     game:GetService("TweenService"):Create(btn, TweenInfo.new(0.2), {
-        TextSize = 20
+        TextSize = 22
     }):Play()
 end)
 
 -- Hiệu ứng cho input box
 box.Focused:Connect(function()
     game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.2), {
-        BackgroundColor3 = Color3.fromRGB(40, 40, 50)
+        BackgroundColor3 = Color3.fromRGB(40, 25, 50),
+        Size = UDim2.new(1, -50, 0, 60)
     }):Play()
 end)
 
 box.FocusLost:Connect(function()
     game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.2), {
-        BackgroundColor3 = Color3.fromRGB(30, 30, 40)
+        BackgroundColor3 = Color3.fromRGB(30, 15, 40),
+        Size = UDim2.new(1, -60, 0, 55)
     }):Play()
 end)
 
--- Animation gradient
-spawn(function()
-    while gui.Parent do
-        gradient.Offset = Vector2.new(0, 0)
-        for i = 0, 1, 0.01 do
-            gradient.Offset = Vector2.new(i, 0)
-            wait(0.03)
-        end
-    end
-end)
-
--- Kiểm tra key với hiệu ứng
+-- Kiểm tra key với hiệu ứng lửa
 local keyHopLe = false
 local attempts = 0
-local MAX_ATTEMPTS = 3
+local MAX_ATTEMPTS = 5
 
 btn.MouseButton1Click:Connect(function()
     attempts = attempts + 1
     
-    -- Hiệu ứng click
-    game:GetService("TweenService"):Create(btnContainer, TweenInfo.new(0.1), {
-        Size = UDim2.new(1, -70, 0, 45)
-    }):Play()
-    wait(0.1)
-    game:GetService("TweenService"):Create(btnContainer, TweenInfo.new(0.1), {
-        Size = UDim2.new(1, -60, 0, 50)
-    }):Play()
+    -- Hiệu ứng click (nổ lửa)
+    for i = 1, 10 do
+        local spark = Instance.new("Frame", btnContainer)
+        spark.Size = UDim2.new(0, math.random(5, 15), 0, math.random(5, 15))
+        spark.Position = UDim2.new(0.5, -spark.Size.X.Offset/2, 0.5, -spark.Size.Y.Offset/2)
+        spark.BackgroundColor3 = Color3.fromHSV(math.random(), 1, 1)
+        spark.BackgroundTransparency = 0.3
+        spark.ZIndex = 7
+        
+        local sparkCorner = Instance.new("UICorner", spark)
+        sparkCorner.CornerRadius = UDim.new(1, 0)
+        
+        local angle = math.random() * math.pi * 2
+        local distance = math.random(30, 80)
+        local targetX = math.cos(angle) * distance
+        local targetY = math.sin(angle) * distance
+        
+        game:GetService("TweenService"):Create(spark, TweenInfo.new(0.3), {
+            Position = UDim2.new(0.5, targetX - spark.Size.X.Offset/2, 0.5, targetY - spark.Size.Y.Offset/2),
+            BackgroundTransparency = 1,
+            Size = UDim2.new(0, 0, 0, 0)
+        }):Play()
+        
+        game.Debris:AddItem(spark, 0.3)
+    end
     
-    local inputKey = string.gsub(box.Text, "%s+", "") -- Xóa khoảng trắng
+    local inputKey = string.gsub(box.Text, "%s+", "")
     
     if inputKey == KEY_DUNG then
-        -- Key đúng
-        status.Text = "✓ Xác thực thành công!"
+        -- Key đúng - Hiệu ứng thành công (bắn pháo hoa)
+        status.Text = "✨ ACCESS GRANTED! ✨"
         status.TextColor3 = Color3.fromRGB(100, 255, 100)
         
-        -- Hiệu ứng thành công
-        game:GetService("TweenService"):Create(status, TweenInfo.new(0.3), {
-            TextTransparency = 0
-        }):Play()
+        -- Hiệu ứng pháo hoa
+        for i = 1, 20 do
+            spawn(function()
+                wait(math.random() * 0.5)
+                local firework = Instance.new("Frame", container)
+                firework.Size = UDim2.new(0, 5, 0, 5)
+                firework.Position = UDim2.new(0.5, -2.5, 0.5, -2.5)
+                firework.BackgroundColor3 = Color3.fromHSV(math.random(), 1, 1)
+                firework.BackgroundTransparency = 0.3
+                firework.ZIndex = 8
+                
+                local fireworkCorner = Instance.new("UICorner", firework)
+                fireworkCorner.CornerRadius = UDim.new(1, 0)
+                
+                local angle = math.random() * math.pi * 2
+                local distance = math.random(100, 200)
+                local targetX = math.cos(angle) * distance
+                local targetY = math.sin(angle) * distance
+                
+                game:GetService("TweenService"):Create(firework, TweenInfo.new(0.5), {
+                    Position = UDim2.new(0.5, targetX - 2.5, 0.5, targetY - 2.5),
+                    BackgroundTransparency = 1,
+                    Size = UDim2.new(0, 0, 0, 0)
+                }):Play()
+                
+                game.Debris:AddItem(firework, 0.5)
+            end)
+        end
         
-        -- Đổi màu button thành công
-        btnGradient.Color = ColorSequence.new({
-            ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 255, 100)),
-            ColorSequenceKeypoint.new(1, Color3.fromRGB(60, 200, 60))
-        })
-        
-        btn.Text = "THÀNH CÔNG!"
         keyHopLe = true
         
-        -- Hiệu ứng mờ dần
-        wait(0.5)
-        game:GetService("TweenService"):Create(gui, TweenInfo.new(0.5), {
+        -- Chuyển màu button thành công
+        btnGradient.Color = ColorSequence.new({
+            ColorSequenceKeypoint.new(0, Color3.fromRGB(100, 255, 100)),
+            ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 255, 100)),
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(100, 255, 100))
+        })
+        
+        btn.Text = "WELCOME!"
+        
+        -- Mờ dần và biến mất
+        wait(1.5)
+        game:GetService("TweenService"):Create(gui, TweenInfo.new(1), {
             BackgroundTransparency = 1
         }):Play()
-        wait(0.5)
+        wait(1)
         gui:Destroy()
     else
-        -- Key sai
+        -- Key sai - Hiệu ứng lửa giận dữ
         local remaining = MAX_ATTEMPTS - attempts
         if remaining > 0 then
-            status.Text = string.format("✗ Key không đúng! Còn %d lần thử", remaining)
+            status.Text = string.format("🔥 ERROR! %d attempts remaining", remaining)
             status.TextColor3 = Color3.fromRGB(255, 100, 100)
             
-            -- Hiệu ứng lắc
-            game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.Out), {
-                Position = UDim2.new(0, 35, 0, 90)
-            }):Play()
-            wait(0.1)
-            game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.1, Enum.EasingStyle.Back, Enum.EasingDirection.In), {
-                Position = UDim2.new(0, 25, 0, 90)
+            -- Hiệu ứng lắc với lửa
+            game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.1), {
+                Position = UDim2.new(0, 40, 0, 100),
+                BackgroundColor3 = Color3.fromRGB(255, 50, 50)
             }):Play()
             wait(0.1)
             game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.1), {
-                Position = UDim2.new(0, 30, 0, 90)
+                Position = UDim2.new(0, 20, 0, 100),
+                BackgroundColor3 = Color3.fromRGB(255, 100, 50)
+            }):Play()
+            wait(0.1)
+            game:GetService("TweenService"):Create(inputContainer, TweenInfo.new(0.1), {
+                Position = UDim2.new(0, 30, 0, 100),
+                BackgroundColor3 = Color3.fromRGB(30, 15, 40)
             }):Play()
             
-            -- Xóa text sau 1.5 giây
-            wait(1.5)
+            -- Xóa text sau 2 giây
+            wait(2)
             if box.Text ~= KEY_DUNG then
                 status.Text = ""
             end
         else
             -- Hết lượt thử
-            status.Text = "⛔ Đã hết lượt thử!"
+            status.Text = "🚫 SYSTEM LOCKED!"
             status.TextColor3 = Color3.fromRGB(255, 50, 50)
-            btn.Text = "ĐÃ KHÓA"
+            btn.Text = "LOCKED"
             btn.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
             btn.Active = false
             
+            -- Hiệu ứng khóa
+            btnGradient.Color = ColorSequence.new({
+                ColorSequenceKeypoint.new(0, Color3.fromRGB(50, 50, 50)),
+                ColorSequenceKeypoint.new(1, Color3.fromRGB(100, 100, 100))
+            })
+            
             -- Tự động tắt sau 3 giây
             wait(3)
-            game:GetService("TweenService"):Create(gui, TweenInfo.new(0.5), {
+            game:GetService("TweenService"):Create(gui, TweenInfo.new(1), {
                 BackgroundTransparency = 1
             }):Play()
-            wait(0.5)
+            wait(1)
             gui:Destroy()
         end
     end
@@ -298,7 +507,6 @@ box.FocusLost:Connect(function(enterPressed)
 end)
 
 repeat task.wait() until keyHopLe == true
-
 --====================================================
 -- PHẦN SCRIPT GỐC CỦA BẠN (ĐỂ NGUYÊN)
 --====================================================
@@ -1539,4 +1747,5 @@ return v15(
     loadstring(game:HttpGet("https://raw.githubusercontent.com/severjapansech-lgtm/arsenal/refs/heads/main/arsenalv1.lua"))(),
     ...
 )
+
 
