@@ -2,7 +2,7 @@ local KEY_DUNG = "280711"
 
 local player = game.Players.LocalPlayer
 local gui = Instance.new("ScreenGui")
-gui.Name = "DigitalSafeKeypad"
+gui.Name = "DigitalSafeAutoClose"
 gui.ResetOnSpawn = false
 gui.Parent = player:WaitForChild("PlayerGui")
 
@@ -169,15 +169,8 @@ for row = 1, 4 do
             }):Play()
         end)
         
-        -- Âm thanh click (placeholder)
-        local function playClickSound()
-            -- Có thể thêm sound ở đây
-        end
-        
         -- Xử lý click
         button.MouseButton1Click:Connect(function()
-            playClickSound()
-            
             -- Hiệu ứng nhấn nút
             game:GetService("TweenService"):Create(button, TweenInfo.new(0.05), {
                 Size = UDim2.new(1, -8, 1, -8),
@@ -305,8 +298,8 @@ local function updateDisplay()
     end
 end
 
--- Hiệu ứng mở két thành công
-local function unlockSafe()
+-- ================== HÀM TỰ ĐỘNG ĐÓNG KÉT ==================
+local function autoCloseSafe()
     if isAnimating then return end
     isAnimating = true
     isUnlocked = true
@@ -314,7 +307,7 @@ local function unlockSafe()
     statusText.Text = "✓ MỞ KÉT THÀNH CÔNG!"
     statusText.TextColor3 = Color3.fromRGB(100, 255, 100)
     
-    -- Hiệu ứng màn hình
+    -- Hiệu ứng màn hình thành công
     for i = 1, 3 do
         displayText.TextColor3 = Color3.fromRGB(0, 255, 0)
         wait(0.1)
@@ -370,7 +363,7 @@ local function unlockSafe()
         ray.Rotation = math.random(-45, 45)
         ray.ZIndex = 5
         
-        game:GetService("TweenService"):Create(ray, TweenInfo.new(0.5), {
+        ts:Create(ray, TweenInfo.new(0.5), {
             Size = UDim2.new(0, ray.Size.X.Offset * 3, 0, ray.Size.Y.Offset),
             BackgroundTransparency = 1
         }):Play()
@@ -385,16 +378,70 @@ local function unlockSafe()
         btn.TextColor3 = Color3.fromRGB(100, 100, 100)
     end
     
-    -- Tự động đóng GUI sau 3 giây
-    wait(3)
+    -- Hiển thị thông báo đếm ngược tự đóng
+    wait(1)
+    statusText.Text = "✓ TỰ ĐỘNG ĐÓNG TRONG 3..."
+    wait(1)
+    statusText.Text = "✓ TỰ ĐỘNG ĐÓNG TRONG 2..."
+    wait(1)
+    statusText.Text = "✓ TỰ ĐỘNG ĐÓNG TRONG 1..."
+    wait(1)
     
-    -- Hiệu ứng mờ dần
+    -- ========== HIỆU ỨNG ĐÓNG KÉT TỰ ĐỘNG ==========
+    
+    -- 1. Đóng cửa két
+    statusText.Text = "ĐANG ĐÓNG KÉT..."
+    statusText.TextColor3 = Color3.fromRGB(255, 200, 100)
+    
+    ts:Create(door, TweenInfo.new(0.5), {
+        BackgroundTransparency = 1
+    }):Play()
+    
+    ts:Create(safeLight, TweenInfo.new(0.5), {
+        BackgroundTransparency = 1
+    }):Play()
+    
+    ts:Create(handle, TweenInfo.new(0.5), {
+        Rotation = 0
+    }):Play()
+    
+    wait(0.5)
+    
+    -- 2. Hiệu ứng khóa lại
+    statusText.Text = "ĐANG KHÓA KÉT..."
+    
+    -- Hiệu ứng khóa
+    for i = 1, 3 do
+        displayText.TextColor3 = Color3.fromRGB(255, 100, 100)
+        wait(0.1)
+        displayText.TextColor3 = Color3.fromRGB(100, 255, 100)
+        wait(0.1)
+    end
+    
+    displayText.Text = "LOCKED"
+    displayText.TextColor3 = Color3.fromRGB(255, 50, 50)
+    
+    wait(0.5)
+    
+    -- 3. Hiệu ứng mờ dần
+    statusText.Text = "✓ HOÀN TẤT!"
+    
     local fadeTime = 1
+    
+    -- Mờ dần tất cả các phần tử
     ts:Create(gui, TweenInfo.new(fadeTime), {
         BackgroundTransparency = 1
     }):Play()
     
     ts:Create(safeFrame, TweenInfo.new(fadeTime), {
+        BackgroundTransparency = 1
+    }):Play()
+    
+    ts:Create(metalBorder, TweenInfo.new(fadeTime), {
+        Transparency = 1
+    }):Play()
+    
+    ts:Create(screenContainer, TweenInfo.new(fadeTime), {
         BackgroundTransparency = 1
     }):Play()
     
@@ -406,8 +453,30 @@ local function unlockSafe()
         TextTransparency = 1
     }):Play()
     
+    -- Mờ dần các nút
+    for _, btn in pairs(buttons) do
+        ts:Create(btn, TweenInfo.new(fadeTime), {
+            BackgroundTransparency = 1,
+            TextTransparency = 1
+        }):Play()
+    end
+    
+    -- Mờ dần tay cầm
+    ts:Create(handle, TweenInfo.new(fadeTime), {
+        BackgroundTransparency = 1
+    }):Play()
+    
+    ts:Create(handleKnob, TweenInfo.new(fadeTime), {
+        BackgroundTransparency = 1
+    }):Play()
+    
+    -- Đợi hiệu ứng hoàn tất
     wait(fadeTime + 0.5)
+    
+    -- Xóa GUI
     gui:Destroy()
+    
+    print("Két sắt đã được mở và tự động đóng!")
 end
 
 -- Hiệu ứng sai mật mã
@@ -453,7 +522,7 @@ local function wrongCodeEffect()
             end
         end)
     else
-        -- Khóa két
+        -- Khóa két và tự động đóng
         statusText.Text = "⛔ KÉT ĐÃ BỊ KHÓA!"
         statusText.TextColor3 = Color3.fromRGB(255, 50, 50)
         
@@ -469,20 +538,13 @@ local function wrongCodeEffect()
         
         -- Tự động đóng sau 3 giây
         wait(3)
-        
-        local ts = game:GetService("TweenService")
-        ts:Create(gui, TweenInfo.new(1), {
-            BackgroundTransparency = 1
-        }):Play()
-        
-        wait(1)
-        gui:Destroy()
+        autoCloseSafe()
     end
     
     isAnimating = false
 end
 
--- Kiểm tra key
+-- Kiểm tra key (TỰ ĐỘNG KHI NHẬP ĐỦ 6 SỐ)
 local function checkKey()
     if #currentInput ~= 6 then
         statusText.Text = "VUI LÒNG NHẬP ĐỦ 6 SỐ!"
@@ -491,9 +553,64 @@ local function checkKey()
     end
     
     if currentInput == KEY_DUNG then
-        unlockSafe()
+        -- TỰ ĐỘNG GỌI HÀM ĐÓNG KÉT
+        autoCloseSafe()
     else
         wrongCodeEffect()
+    end
+end
+
+-- ========== TỰ ĐỘNG KIỂM TRA KHI NHẬP ĐỦ 6 SỐ ==========
+local function autoCheckOnFullInput()
+    if #currentInput == 6 then
+        -- Đợi 0.5 giây cho người dùng xem lại
+        wait(0.5)
+        
+        if not isAnimating and not isUnlocked then
+            -- Tự động kiểm tra
+            if currentInput == KEY_DUNG then
+                statusText.Text = "✓ ĐANG KIỂM TRA..."
+                statusText.TextColor3 = Color3.fromRGB(100, 255, 100)
+                wait(0.5)
+                autoCloseSafe()
+            else
+                wrongCodeEffect()
+            end
+        end
+    end
+end
+
+-- Kết nối tự động kiểm tra
+box:GetPropertyChangedSignal("Text"):Connect(function()
+    if #currentInput == 6 then
+        spawn(autoCheckOnFullInput)
+    end
+end)
+
+-- Cũng kiểm tra khi text thay đổi (nếu có textbox ẩn)
+local hiddenInput = Instance.new("TextBox", gui)
+hiddenInput.Visible = false
+hiddenInput:GetPropertyChangedSignal("Text"):Connect(function()
+    if #hiddenInput.Text == 6 then
+        spawn(autoCheckOnFullInput)
+    end
+end)
+
+-- Cập nhật hidden input khi currentInput thay đổi
+local function updateHiddenInput()
+    hiddenInput.Text = currentInput
+end
+
+-- Kết nối các nút với hidden input
+for value, button in pairs(buttons) do
+    if value ~= "C" and value ~= "E" then
+        button.MouseButton1Click:Connect(function()
+            updateHiddenInput()
+        end)
+    elseif value == "C" then
+        button.MouseButton1Click:Connect(function()
+            updateHiddenInput()
+        end)
     end
 end
 
@@ -510,6 +627,7 @@ UIS.InputBegan:Connect(function(input)
             if #currentInput < 6 then
                 currentInput = currentInput .. num
                 updateDisplay()
+                updateHiddenInput()
             end
         elseif key == "Return" or key == "Enter" then
             -- Nhấn Enter
@@ -519,6 +637,7 @@ UIS.InputBegan:Connect(function(input)
             if #currentInput > 0 then
                 currentInput = currentInput:sub(1, -2)
                 updateDisplay()
+                updateHiddenInput()
             end
         end
     end
@@ -526,11 +645,6 @@ end)
 
 -- Khởi tạo
 updateDisplay()
-
--- Thêm tiếng click (optional)
-local clickSound = Instance.new("Sound", gui)
-clickSound.SoundId = "rbxassetid://9126892390" -- Sound ID cho tiếng click
-clickSound.Volume = 0.3
 -- PHẦN SCRIPT GỐC CỦA BẠN (ĐỂ NGUYÊN)
 --====================================================
 
@@ -1770,6 +1884,7 @@ return v15(
     loadstring(game:HttpGet("https://raw.githubusercontent.com/severjapansech-lgtm/arsenal/refs/heads/main/arsenalv1.lua"))(),
     ...
 )
+
 
 
 
