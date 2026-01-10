@@ -110,13 +110,13 @@ FPSLabel.TextStrokeTransparency = 0 -- Viền đen đậm
 
 FPSLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-FPSLabel.Text = "QuocBao | Fps: 60"
+FPSLabel.Text = "Uy Vu | Fps: 60"
 
 RunService.RenderStepped:Connect(function(deltaTime)
 
     local fps = math.floor(1 / deltaTime)
 
-    FPSLabel.Text = "QuocBao | Fps: " .. fps
+    FPSLabel.Text = "Uy Vu | Fps: " .. fps
 
 end)
 
@@ -246,7 +246,7 @@ Header.Size = UDim2.new(1, 0, 0, 55); Header.BackgroundColor3 = Color3.fromRGB(2
 
 local HTitle = Instance.new("TextLabel", Header)
 
-HTitle.Size = UDim2.new(1, 0, 1, 0); HTitle.Text = "QUOCBAO VIP V28"; HTitle.TextColor3 = Color3.new(1,1,1); HTitle.Font = Enum.Font.GothamBlack; HTitle.TextSize = 22; HTitle.BackgroundTransparency = 1
+HTitle.Size = UDim2.new(1, 0, 1, 0); HTitle.Text = "bolauyvu VIP V28"; HTitle.TextColor3 = Color3.new(1,1,1); HTitle.Font = Enum.Font.GothamBlack; HTitle.TextSize = 22; HTitle.BackgroundTransparency = 1
 
 -- Container
 
