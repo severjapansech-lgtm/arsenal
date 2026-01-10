@@ -1,0 +1,92 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- Tạo cửa sổ chính với tông màu Đen/Đỏ (hoặc Đen hoàn toàn)
+local Window = Rayfield:CreateWindow({
+   Name = "🌑 Bố Vũ Đẹp Zai PREMIUM HUB",
+   LoadingTitle = "Đang khởi tạo hệ thống...",
+   LoadingSubtitle = "by Bố Vũ Đẹp Zai",
+   ConfigurationSaving = {
+      Enabled = false
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "9sZAVVJud", -- Chỉ cần mã mời
+      RememberJoins = true
+   },
+   KeySystem = false -- Tắt hệ thống key để anh em vào thẳng cho sướng
+})
+
+-- Hiệu ứng thông báo khi vừa mở Script
+Rayfield:Notify({
+   Title = "Hệ thống đã sẵn sàng!",
+   Content = "Chào mừng Bố Vũ Đẹp Zai đã trở lại. Chúc bạn trải nghiệm tốt nhất!",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { 
+      Ignore = {
+         Name = "Đồng ý!",
+         Callback = function()
+            print("Người dùng đã xác nhận")
+         end
+      },
+   },
+})
+
+-- Tab Chính
+local MainTab = Window:CreateTab("⚡ Script Main", 4483362458) 
+
+MainTab:CreateSection("Điều khiển chính")
+
+MainTab:CreateButton({
+   Name = "🚀 KÍCH HOẠT SCRIPT (LOADSTRING)",
+   Info = "Bấm vào đây để bắt đầu chạy script chính của bạn",
+   Callback = function()
+      -- Hiệu ứng chạy script
+      Rayfield:Notify({
+         Title = "Đang tải dữ liệu...",
+         Content = "Vui lòng chờ trong giây lát...",
+         Duration = 2,
+         Image = 4483362458,
+      })
+      
+      -- Script gốc của bạn
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/severjapansech-lgtm/arsenal/refs/heads/main/iosviet"))()
+   end,
+})
+
+MainTab:CreateButton({
+   Name = "📋 Copy Script Link (Dành cho bạn bè)",
+   Callback = function()
+      setclipboard("loadstring(game:HttpGet('https://raw.githubusercontent.com/severjapansech-lgtm/arsenal/refs/heads/main/iosviet'))()")
+      Rayfield:Notify({
+         Title = "Đã Copy!",
+         Content = "Script đã được lưu vào bộ nhớ tạm.",
+         Duration = 3,
+         Image = 4483362458,
+      })
+   end,
+})
+
+-- Tab Cộng đồng
+local InfoTab = Window:CreateTab("🌐 Social", 4483362458)
+
+InfoTab:CreateSection("Kết nối với mình")
+
+InfoTab:CreateButton({
+   Name = "🔥 THAM GIA DISCORD (MỜI HẤP DẪN)",
+   Info = "Nơi cập nhật script mới nhất và hỗ trợ 24/7",
+   Callback = function()
+      setclipboard("https://discord.gg/9sZAVVJud")
+      Rayfield:Notify({
+         Title = "Đã Copy Link Discord",
+         Content = "Dán vào trình duyệt để gia nhập đại gia đình nhé!",
+         Duration = 5,
+         Image = 4483362458,
+      })
+   end,
+})
+
+InfoTab:CreateLabel("TikTok: Bố Vũ Đẹp Zai")
+InfoTab:CreateLabel("Cảm ơn bạn đã tin dùng script của mình!")
+
+-- Hiệu ứng gập menu (Giao diện đen huyền bí)
