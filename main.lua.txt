@@ -5,18 +5,12 @@
     |__/|__/_/_//_/\_,_/\____/___/
     
     v1.6.64  |  2026-04-24  |  Roblox UI Library for scripts
-    
-    To view the source code, see the `src/` folder on the official GitHub repository.
-    
-    Author: Footagesus (Footages, .ftgs, oftgs)
-    Github: https://github.com/Footagesus/WindUI
-    Discord: https://discord.gg/ftgs-development-hub-1300692552005189632
-    License: MIT
+    (Key system removed)
 ]]
 
 local a a={cache={}, load=function(b)if not a.cache[b]then a.cache[b]={c=a[b]()}end return a.cache[b].c end}do function a.a()local b=(cloneref or clonereference or function(b)return b end)
 
-local d=b(game:GetService"ReplicatedStorage":WaitForChild("GetIcons",99999):InvokeServer())
+local d={Icons={},Spritesheets={},IconsType="lucide"}
 
 local function parseIconString(e)
 if type(e)=="string"then
@@ -1596,563 +1590,14 @@ end
 
 return f end function a.f()
 
-
-
-
-
-
-
-
-
-
-
-
-local b=4294967296;local d=b-1;local function c(e,f)local g,h=0,1;while e~=0 or f~=0 do local j,l=e%2,f%2;local m=(j+l)%2;g=g+m*h;e=math.floor(e/2)f=math.floor(f/2)h=h*2 end;return g%b end;local function k(e,f,g,...)local h;if f then e=e%b;f=f%b;h=c(e,f)if g then h=k(h,g,...)end;return h elseif e then return e%b else return 0 end end;local function n(e,f,g,...)local h;if f then e=e%b;f=f%b;h=(e+f-c(e,f))/2;if g then h=n(h,g,...)end;return h elseif e then return e%b else return d end end;local function o(e)return d-e end;local function q(e,f)if f<0 then return lshift(e,-f)end;return math.floor(e%4294967296/2^f)end;local function s(e,f)if f>31 or f<-31 then return 0 end;return q(e%b,f)end;local function lshift(e,f)if f<0 then return s(e,-f)end;return e*2^f%4294967296 end;local function t(e,f)e=e%b;f=f%32;local g=n(e,2^f-1)return s(e,f)+lshift(g,32-f)end;local e={0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2}local function w(f)return string.gsub(f,".",function(g)return string.format("%02x",string.byte(g))end)end;local function y(f,g)local h=""for j=1,g do local l=f%256;h=string.char(l)..h;f=(f-l)/256 end;return h end;local function D(f,g)local h=0;for j=g,g+3 do h=h*256+string.byte(f,j)end;return h end;local function E(f,g)local h=64-(g+9)%64;g=y(8*g,8)f=f.."\128"..string.rep("\0",h)..g;assert(#f%64==0)return f end;local function I(f)f[1]=0x6a09e667;f[2]=0xbb67ae85;f[3]=0x3c6ef372;f[4]=0xa54ff53a;f[5]=0x510e527f;f[6]=0x9b05688c;f[7]=0x1f83d9ab;f[8]=0x5be0cd19;return f end;local function K(f,g,h)local j={}for l=1,16 do j[l]=D(f,g+(l-1)*4)end;for l=17,64 do local m=j[l-15]local p=k(t(m,7),t(m,18),s(m,3))m=j[l-2]j[l]=(j[l-16]+p+j[l-7]+k(t(m,17),t(m,19),s(m,10)))%b end;local l,m,p,r,u,v,x,z=h[1],h[2],h[3],h[4],h[5],h[6],h[7],h[8]for A=1,64 do local B=k(t(l,2),t(l,13),t(l,22))local C=k(n(l,m),n(l,p),n(m,p))local F=(B+C)%b;local G=k(t(u,6),t(u,11),t(u,25))local H=k(n(u,v),n(o(u),x))local J=(z+G+H+e[A]+j[A])%b;z=x;x=v;v=u;u=(r+J)%b;r=p;p=m;m=l;l=(J+F)%b end;h[1]=(h[1]+l)%b;h[2]=(h[2]+m)%b;h[3]=(h[3]+p)%b;h[4]=(h[4]+r)%b;h[5]=(h[5]+u)%b;h[6]=(h[6]+v)%b;h[7]=(h[7]+x)%b;h[8]=(h[8]+z)%b end;local function Z(f)f=E(f,#f)local g=I{}for h=1,#f,64 do K(f,h,g)end;return w(y(g[1],4)..y(g[2],4)..y(g[3],4)..y(g[4],4)..y(g[5],4)..y(g[6],4)..y(g[7],4)..y(g[8],4))end;local f;local g={["\\"]="\\",["\""]="\"",["\b"]="b",["\f"]="f",["\n"]="n",["\r"]="r",["\t"]="t"}local h={["/"]="/"}for j,l in pairs(g)do h[l]=j end;local j=function(j)return"\\"..(g[j]or string.format("u%04x",j:byte()))end;local l=function(l)return"null"end;local m=function(m,p)local r={}p=p or{}if p[m]then error"circular reference"end;p[m]=true;if rawget(m,1)~=nil or next(m)==nil then local u=0;for v in pairs(m)do if type(v)~="number"then error"invalid table: mixed or invalid key types"end;u=u+1 end;if u~=#m then error"invalid table: sparse array"end;for v,x in ipairs(m)do table.insert(r,f(x,p))end;p[m]=nil;return"["..table.concat(r,",").."]"else for u,v in pairs(m)do if type(u)~="string"then error"invalid table: mixed or invalid key types"end;table.insert(r,f(u,p)..":"..f(v,p))end;p[m]=nil;return"{"..table.concat(r,",").."}"end end;local p=function(p)return'"'..p:gsub('[%z\1-\31\\"]',j)..'"'end;local r=function(r)if r~=r or r<=-math.huge or r>=math.huge then error("unexpected number value '"..tostring(r).."'")end;return string.format("%.14g",r)end;local u={["nil"]=l,table=m,string=p,number=r,boolean=tostring}f=function(v,x)local z=type(v)local A=u[z]if A then return A(v,x)end;error("unexpected type '"..z.."'")end;local v=function(v)return f(v)end;local x;local z=function(...)local z={}for A=1,select("#",...)do z[select(A,...)]=true end;return z end;local A=z(" ","\t","\r","\n")local B=z(" ","\t","\r","\n","]","}",",")local C=z("\\","/",'"',"b","f","n","r","t","u")local F=z("true","false","null")local G={["true"]=true,["false"]=false,null=nil}local H=function(H,J,L,M)for N=J,#H do if L[H:sub(N,N)]~=M then return N end end;return#H+1 end;local J=function(J,L,M)local N=1;local O=1;for P=1,L-1 do O=O+1;if J:sub(P,P)=="\n"then N=N+1;O=1 end end;error(string.format("%s at line %d col %d",M,N,O))end;local L=function(L)local M=math.floor;if L<=0x7f then return string.char(L)elseif L<=0x7ff then return string.char(M(L/64)+192,L%64+128)elseif L<=0xffff then return string.char(M(L/4096)+224,M(L%4096/64)+128,L%64+128)elseif L<=0x10ffff then return string.char(M(L/262144)+240,M(L%262144/4096)+128,M(L%4096/64)+128,L%64+128)end;error(string.format("invalid unicode codepoint '%x'",L))end;local M=function(M)local N=tonumber(M:sub(1,4),16)local O=tonumber(M:sub(7,10),16)if O then return L((N-0xd800)*0x400+O-0xdc00+0x10000)else return L(N)end end;local N=function(N,O)local P=""local Q=O+1;local R=Q;while Q<=#N do local S=N:byte(Q)if S<32 then J(N,Q,"control character in string")elseif S==92 then P=P..N:sub(R,Q-1)Q=Q+1;local T=N:sub(Q,Q)if T=="u"then local U=N:match("^[dD][89aAbB]%x%x\\u%x%x%x%x",Q+1)or N:match("^%x%x%x%x",Q+1)or J(N,Q-1,"invalid unicode escape in string")P=P..M(U)Q=Q+#U else if not C[T]then J(N,Q-1,"invalid escape char '"..T.."' in string")end;P=P..h[T]end;R=Q+1 elseif S==34 then P=P..N:sub(R,Q-1)return P,Q+1 end;Q=Q+1 end;J(N,O,"expected closing quote for string")end;local O=function(O,P)local Q=H(O,P,B)local R=O:sub(P,Q-1)local S=tonumber(R)if not S then J(O,P,"invalid number '"..R.."'")end;return S,Q end;local P=function(P,Q)local R=H(P,Q,B)local S=P:sub(Q,R-1)if not F[S]then J(P,Q,"invalid literal '"..S.."'")end;return G[S],R end;local Q=function(Q,R)local S={}local T=1;R=R+1;while 1 do local U;R=H(Q,R,A,true)if Q:sub(R,R)=="]"then R=R+1;break end;U,R=x(Q,R)S[T]=U;T=T+1;R=H(Q,R,A,true)local V=Q:sub(R,R)R=R+1;if V=="]"then break end;if V~=","then J(Q,R,"expected ']' or ','")end end;return S,R end;local R=function(R,S)local T={}S=S+1;while 1 do local U,V;S=H(R,S,A,true)if R:sub(S,S)=="}"then S=S+1;break end;if R:sub(S,S)~='"'then J(R,S,"expected string for key")end;U,S=x(R,S)S=H(R,S,A,true)if R:sub(S,S)~=":"then J(R,S,"expected ':' after key")end;S=H(R,S+1,A,true)V,S=x(R,S)T[U]=V;S=H(R,S,A,true)local W=R:sub(S,S)S=S+1;if W=="}"then break end;if W~=","then J(R,S,"expected '}' or ','")end end;return T,S end;local S={['"']=N,["0"]=O,["1"]=O,["2"]=O,["3"]=O,["4"]=O,["5"]=O,["6"]=O,["7"]=O,["8"]=O,["9"]=O,["-"]=O,t=P,f=P,n=P,["["]=Q,["{"]=R}x=function(T,U)local V=T:sub(U,U)local W=S[V]if W then return W(T,U)end;J(T,U,"unexpected character '"..V.."'")end;local T=function(T)if type(T)~="string"then error("expected argument of type string, got "..type(T))end;local U,V=x(T,H(T,1,A,true))V=H(T,V,A,true)if V<=#T then J(T,V,"trailing garbage")end;return U end;
-local U,V,W=v,T,Z;
-
-
-
-
-
-local X={}
-
-local Y=(cloneref or clonereference or function(Y)return Y end)
-
-
-function X.New(_,aa)
-
-local ab=_;
-local ac=aa;
-local ad=true;
-
-
-local ae=function(ae)end;
-
-
-repeat task.wait(1)until game:IsLoaded();
-
-
-local af=false;
-local ag,ah,ai,aj,ak,al,am,an,ao=setclipboard or toclipboard,request or http_request or syn_request,string.char,tostring,string.sub,os.time,math.random,math.floor,gethwid or function()return Y(game:GetService"Players").LocalPlayer.UserId end
-local ap,aq="",0;
-
-
-local ar="https://api.platoboost.app";
-local as=ah{
-Url=ar.."/public/connectivity",
-Method="GET"
-};
-if as.StatusCode~=200 and as.StatusCode~=429 then
-ar="https://api.platoboost.net";
-end
-
-
-function cacheLink()
-if aq+(600)<al()then
-local at=ah{
-Url=ar.."/public/start",
-Method="POST",
-Body=U{
-service=ab,
-identifier=W(ao())
-},
-Headers={
-["Content-Type"]="application/json",
-["User-Agent"]="Roblox/Exploit"
-}
-};
-
-if at.StatusCode==200 then
-local au=V(at.Body);
-
-if au.success==true then
-ap=au.data.url;
-aq=al();
-return true,ap
-else
-ae(au.message);
-return false,au.message
-end
-elseif at.StatusCode==429 then
-local au="you are being rate limited, please wait 20 seconds and try again.";
-ae(au);
-return false,au
-end
-
-local au="Failed to cache link.";
-ae(au);
-return false,au
-else
-return true,ap
-end
-end
-
-cacheLink();
-
-
-local at=function()
-local at=""
-for au=1,16 do
-at=at..ai(an(am()*(26))+97)
-end
-return at
-end
-
-
-for au=1,5 do
-local av=at();
-task.wait(0.2)
-if at()==av then
-local aw="platoboost nonce error.";
-ae(aw);
-error(aw);
-end
-end
-
-
-local au=function()
-local au,av=cacheLink();
-
-if au then
-ag(av);
-end
-end
-
-
-local av=function(av)
-local aw=at();
-local ax=ar.."/public/redeem/"..aj(ab);
-
-local ay={
-identifier=W(ao()),
-key=av
-}
-
-if ad then
-ay.nonce=aw;
-end
-
-local az=ah{
-Url=ax,
-Method="POST",
-Body=U(ay),
-Headers={
-["Content-Type"]="application/json"
-}
-};
-
-if az.StatusCode==200 then
-local aA=V(az.Body);
-
-if aA.success==true then
-if aA.data.valid==true then
-if ad then
-if aA.data.hash==W("true".."-"..aw.."-"..ac)then
-return true
-else
-ae"failed to verify integrity.";
-return false
-end
-else
-return true
-end
-else
-ae"key is invalid.";
-return false
-end
-else
-if ak(aA.message,1,27)=="unique constraint violation"then
-ae"you already have an active key, please wait for it to expire before redeeming it.";
-return false
-else
-ae(aA.message);
-return false
-end
-end
-elseif az.StatusCode==429 then
-ae"you are being rate limited, please wait 20 seconds and try again.";
-return false
-else
-ae"server returned an invalid status code, please try again later.";
-return false
-end
-end
-
-
-local aw=function(aw)
-if af==true then
-return false,("A request is already being sent, please slow down.")
-else
-af=true;
-end
-
-local ax=at();
-local ay=ar.."/public/whitelist/"..aj(ab).."?identifier="..W(ao()).."&key="..aw;
-
-if ad then
-ay=ay.."&nonce="..ax;
-end
-
-local az=ah{
-Url=ay,
-Method="GET",
-};
-
-af=false;
-
-if az.StatusCode==200 then
-local aA=V(az.Body);
-
-if aA.success==true then
-if aA.data.valid==true then
-if ad then
-if aA.data.hash==W("true".."-"..ax.."-"..ac)then
-return true,""
-else
-return false,("failed to verify integrity.")
-end
-else
-return true
-end
-else
-if ak(aw,1,4)=="KEY_"then
-return true,av(aw)
-else
-return false,("Key is invalid.")
-end
-end
-else
-return false,(aA.message)
-end
-elseif az.StatusCode==429 then
-return false,("You are being rate limited, please wait 20 seconds and try again.")
-else
-return false,("Server returned an invalid status code, please try again later.")
-end
-end
-
-
-local ax=function(ax)
-local ay=at();
-local az=ar.."/public/flag/"..aj(ab).."?name="..ax;
-
-if ad then
-az=az.."&nonce="..ay;
-end
-
-local aA=ah{
-Url=az,
-Method="GET",
-};
-
-if aA.StatusCode==200 then
-local aB=V(aA.Body);
-
-if aB.success==true then
-if ad then
-if aB.data.hash==W(aj(aB.data.value).."-"..ay.."-"..ac)then
-return aB.data.value
-else
-ae"failed to verify integrity.";
-return nil
-end
-else
-return aB.data.value
-end
-else
-ae(aB.message);
-return nil
-end
-else
-return nil
-end
-end
-
-
-return{
-Verify=aw,
-GetFlag=ax,
-Copy=au,
-}
-end
-
-
-return X end function a.g()
-
-
-
-
-
-
-local aa=(cloneref or clonereference or function(aa)
-return aa
-end)
-
-local ab=aa(game:GetService"HttpService")
-local ac={}
-
-function ac.New(ad)
-local ae=gethwid or function()
-return aa(game:GetService"Players").LocalPlayer.UserId
-end
-local af,ag=request or http_request or syn_request,setclipboard or toclipboard
-
-function ValidateKey(ah)
-local ai="https://new.pandadevelopment.net/api/v1/keys/validate"
-
-local aj={
-ServiceID=ad,
-HWID=tostring(ae()),
-Key=tostring(ah),
-}
-
-local ak=ab:JSONEncode(aj)
-local al,am=pcall(function()
-return af{
-Url=ai,
-Method="POST",
-Headers={
-["User-Agent"]="Roblox/Exploit",
-["Content-Type"]="application/json",
-},
-Body=ak,
-}
-end)
-
-if al and am then
-if am.Success then
-local an,ao=pcall(function()
-return ab:JSONDecode(am.Body)
-end)
-
-if an and ao then
-if ao.Authenticated_Status and ao.Authenticated_Status=="Success"then
-return true,"Authenticated"
-else
-local ap=ao.Note or"Unknown reason"
-return false,"Authentication failed: "..ap
-end
-else
-return false,"JSON decode error"
-end
-else
-warn(
-" HTTP request was not successful. Code: "
-..tostring(am.StatusCode)
-.." Message: "
-..am.StatusMessage
-)
-return false,"HTTP request failed: "..am.StatusMessage
-end
-else
-return false,"Request pcall error"
-end
-end
-
-function GetKeyLink()
-return"https://new.pandadevelopment.net/getkey/"..tostring(ad).."?hwid="..tostring(ae())
-end
-
-function CopyLink()
-return ag(GetKeyLink())
-end
-
-return{
-Verify=ValidateKey,
-Copy=CopyLink,
-}
-end
-
-return ac end function a.h()
-
-
-
-
-
-
-
-
-
-local aa={}
-
-
-function aa.New(ab,ac)
-local ad="https://sdkapi-public.luarmor.net/library.lua"
-
-local ae=loadstring(
-game.HttpGetAsync and game:HttpGetAsync(ad)
-or HttpService:GetAsync(ad)
-)()
-local af=setclipboard or toclipboard
-
-ae.script_id=ab
-
-function ValidateKey(ag)
-local ah=ae.check_key(ag);
-
-
-if(ah.code=="KEY_VALID")then
-return true,"Whitelisted!"
-
-elseif(ah.code=="KEY_HWID_LOCKED")then
-return false,"Key linked to a different HWID. Please reset it using our bot"
-
-elseif(ah.code=="KEY_INCORRECT")then
-return false,"Key is wrong or deleted!"
-else
-return false,"Key check failed:"..ah.message.." Code: "..ah.code
-end
-end
-
-function CopyLink()
-af(tostring(ac))
-end
-
-return{
-Verify=ValidateKey,
-Copy=CopyLink
-}
-end
-
-
-return aa end function a.i()
-
-
-
-
-
-
-
-
-local aa={}
-
-function aa.New(ab,ac,ad)
-JunkieProtected.API_KEY=ac
-JunkieProtected.PROVIDER=ad
-JunkieProtected.SERVICE_ID=ab
-
-local function ValidateKey(ae)
-if not ae or ae==""then
-print"No key provided!"
-
-return false,"No key provided. Please get a key."
-end
-
-local af=JunkieProtected.IsKeylessMode()
-if af and af.keyless_mode then
-print"Keyless mode enabled. Starting script..."
-return true,"Keyless mode enabled. Starting script..."
-end
-
-local ag=JunkieProtected.ValidateKey{Key=ae}
-if ag=="valid"then
-print"Key is valid! Starting script..."
-load()
-if _G.JD_IsPremium then
-print"Premium user detected!"
-else
-print"Standard user"
-end
-
-return true,"Key is valid!"
-else
-local ah=JunkieProtected.GetKeyLink()
-print"Invalid key!"
-
-return false,"Invalid key. Get one from:"..ah
-end
-end
-
-local function copyLink()
-local ae=JunkieProtected.GetKeyLink()
-
-if setclipboard then
-setclipboard(ae)
-end
-end
-return{
-Verify=ValidateKey,
-Copy=copyLink
-}
-end
-
-return aa end function a.j()
-
-
-
-return{
-platoboost={
-Name="Platoboost",
-Icon="rbxassetid://75920162824531",
-Args={"ServiceId","Secret"},
-
-New=a.load'f'.New
-},
-pandadevelopment={
-Name="Panda Development",
-Icon="panda",
-Args={"ServiceId"},
-
-New=a.load'g'.New
-},
-luarmor={
-Name="Luarmor",
-Icon="rbxassetid://130918283130165",
-Args={"ScriptId","Discord"},
-
-New=a.load'h'.New
-},
-junkiedevelopment={
-Name="Junkie Development",
-Icon="rbxassetid://106310347705078",
-Args={"ServiceId","ApiKey","Provider"},
-
-New=a.load'i'.New
-},
-
-
-}end function a.k()
-
-
-
-return[[
-{
-    "name": "windui",
-    "version": "1.6.64",
-    "main": "./dist/main.lua",
-    "repository": "https://github.com/Footagesus/WindUI",
-    "discord": "https://discord.gg/ftgs-development-hub-1300692552005189632",
-    "author": "Footagesus",
-    "description": "Roblox UI Library for scripts",
-    "license": "MIT",
-    "scripts": {
-        "dev": "bash build/build.sh dev $INPUT_FILE",
-        "build": "bash build/build.sh build $INPUT_FILE",
-        "live": "python3 -m http.server 8642",
-        "watch": "chokidar . -i 'node_modules' -i 'dist' -i 'build' -c 'npm run dev --'",
-        "live-build": "concurrently \"npm run live\" \"npm run watch --\"",
-        "example-live-build": "INPUT_FILE=main_example.lua npm run live-build",
-        "updater": "python3 updater/main.py"
-    },
-    "keywords": [
-        "ui-library",
-        "ui-design",
-        "script",
-        "script-hub",
-        "exploiting"
-    ],
-    "devDependencies": {
-        "chokidar-cli": "^3.0.0",
-        "concurrently": "^9.2.0"
-    }
-}
-]]end function a.l()
+-- KEY SYSTEM MODULES REMOVED
 
 local aa={}
 
 local ab=a.load'c'
 local ac=ab.New
 local ad=ab.Tween
+
 
 function aa.New(ae,af,ag,ah,ai,aj,ak,al)
 ah=ah or"Primary"
@@ -2291,7 +1736,7 @@ end)
 return ao
 end
 
-return aa end function a.m()
+return aa end function a.g()
 
 local aa={}
 
@@ -2426,7 +1871,7 @@ return aq
 end
 
 
-return aa end function a.n()
+return aa end function a.h()
 local aa=a.load'c'
 local ab=aa.New
 local ac=aa.Tween
@@ -2605,19 +2050,19 @@ end
 return aj
 end
 
-return ad end function a.o()
+return ad end function a.i()
 local aa={}
 
 local ab=a.load'c'
 local ac=ab.New
 local ad=ab.Tween
 
-local ae=a.load'l'.New
-local af=a.load'm'.New
+local ae=a.load'f'.New
+local af=a.load'g'.New
 
-function aa.new(ag,ah,ai,aj)
-local ak=a.load'n'
-local al=ak.Create(true,"Popup",ag.Window,ag.WindUI,ag.WindUI.ScreenGui.KeySystem)
+function aa.new(ag,ah,ai)
+local ak=a.load'h'
+local al=ak.Create(true,"Popup",ag.Window,ag.WindUI,ag.WindUI.ScreenGui.Popups)
 
 local am={}
 
@@ -2815,223 +2260,6 @@ setclipboard(ag.KeySystem.URL)
 end,"Secondary",ax.Frame)
 end
 
-if ag.KeySystem.API then
-
-
-
-
-
-
-
-
-local aA=240
-local aB=false
-local b=ae("Get key","key",nil,"Secondary",ax.Frame)
-
-local d=ab.NewRoundFrame(99,"Squircle",{
-Size=UDim2.new(0,1,1,0),
-ThemeTag={
-ImageColor3="Text",
-},
-ImageTransparency=0.9,
-})
-
-ac("Frame",{
-BackgroundTransparency=1,
-Size=UDim2.new(0,0,1,0),
-AutomaticSize="X",
-Parent=b.Frame,
-},{
-d,
-ac("UIPadding",{
-PaddingLeft=UDim.new(0,5),
-PaddingRight=UDim.new(0,5),
-}),
-})
-
-local f=ab.Image("chevron-down","chevron-down",0,"Temp","KeySystem",true)
-
-f.Size=UDim2.new(1,0,1,0)
-
-ac("Frame",{
-Size=UDim2.new(0,21,0,21),
-Parent=b.Frame,
-BackgroundTransparency=1,
-},{
-f,
-})
-
-local g=ab.NewRoundFrame(15,"Squircle",{
-Size=UDim2.new(1,0,0,0),
-AutomaticSize="Y",
-ThemeTag={
-ImageColor3="Background",
-},
-},{
-ac("UIPadding",{
-PaddingTop=UDim.new(0,5),
-PaddingLeft=UDim.new(0,5),
-PaddingRight=UDim.new(0,5),
-PaddingBottom=UDim.new(0,5),
-}),
-ac("UIListLayout",{
-FillDirection="Vertical",
-Padding=UDim.new(0,5),
-}),
-})
-
-local h=ac("Frame",{
-BackgroundTransparency=1,
-Size=UDim2.new(0,aA,0,0),
-ClipsDescendants=true,
-AnchorPoint=Vector2.new(1,0),
-Parent=b,
-Position=UDim2.new(1,0,1,15),
-},{
-g,
-})
-
-ac("TextLabel",{
-Text="Select Service",
-BackgroundTransparency=1,
-FontFace=Font.new(ab.Font,Enum.FontWeight.Medium),
-ThemeTag={TextColor3="Text"},
-TextTransparency=0.2,
-TextSize=16,
-Size=UDim2.new(1,0,0,0),
-AutomaticSize="Y",
-TextWrapped=true,
-TextXAlignment="Left",
-Parent=g,
-},{
-ac("UIPadding",{
-PaddingTop=UDim.new(0,10),
-PaddingLeft=UDim.new(0,10),
-PaddingRight=UDim.new(0,10),
-PaddingBottom=UDim.new(0,10),
-}),
-})
-
-for j,l in next,ag.KeySystem.API do
-local m=ag.WindUI.Services[l.Type]
-if m then
-local p={}
-for r,u in next,m.Args do
-table.insert(p,l[u])
-end
-
-local r=m.New(table.unpack(p))
-r.Type=l.Type
-table.insert(am,r)
-
-local u=ab.Image(
-l.Icon or m.Icon or Icons[l.Type]or"user",
-l.Icon or m.Icon or Icons[l.Type]or"user",
-0,
-"Temp",
-"KeySystem",
-true
-)
-u.Size=UDim2.new(0,24,0,24)
-
-local v=ab.NewRoundFrame(10,"Squircle",{
-Size=UDim2.new(1,0,0,0),
-ThemeTag={ImageColor3="Text"},
-ImageTransparency=1,
-Parent=g,
-AutomaticSize="Y",
-},{
-ac("UIListLayout",{
-FillDirection="Horizontal",
-Padding=UDim.new(0,10),
-VerticalAlignment="Center",
-}),
-u,
-ac("UIPadding",{
-PaddingTop=UDim.new(0,10),
-PaddingLeft=UDim.new(0,10),
-PaddingRight=UDim.new(0,10),
-PaddingBottom=UDim.new(0,10),
-}),
-ac("Frame",{
-BackgroundTransparency=1,
-Size=UDim2.new(1,-34,0,0),
-AutomaticSize="Y",
-},{
-ac("UIListLayout",{
-FillDirection="Vertical",
-Padding=UDim.new(0,5),
-HorizontalAlignment="Center",
-}),
-ac("TextLabel",{
-Text=l.Title or m.Name,
-BackgroundTransparency=1,
-FontFace=Font.new(ab.Font,Enum.FontWeight.Medium),
-ThemeTag={TextColor3="Text"},
-TextTransparency=0.05,
-TextSize=18,
-Size=UDim2.new(1,0,0,0),
-AutomaticSize="Y",
-TextWrapped=true,
-TextXAlignment="Left",
-}),
-ac("TextLabel",{
-Text=l.Desc or"",
-BackgroundTransparency=1,
-FontFace=Font.new(ab.Font,Enum.FontWeight.Regular),
-ThemeTag={TextColor3="Text"},
-TextTransparency=0.2,
-TextSize=16,
-Size=UDim2.new(1,0,0,0),
-AutomaticSize="Y",
-TextWrapped=true,
-Visible=l.Desc and true or false,
-TextXAlignment="Left",
-}),
-}),
-},true)
-
-ab.AddSignal(v.MouseEnter,function()
-ad(v,0.08,{ImageTransparency=0.95}):Play()
-end)
-ab.AddSignal(v.InputEnded,function()
-ad(v,0.08,{ImageTransparency=1}):Play()
-end)
-ab.AddSignal(v.MouseButton1Click,function()
-r.Copy()
-ag.WindUI:Notify{
-Title="Key System",
-Content="Key link copied to clipboard.",
-Image="key",
-}
-end)
-end
-end
-
-ab.AddSignal(b.MouseButton1Click,function()
-if not aB then
-ad(
-h,
-0.3,
-{Size=UDim2.new(0,aA,0,g.AbsoluteSize.Y+1)},
-Enum.EasingStyle.Quint,
-Enum.EasingDirection.Out
-):Play()
-ad(f,0.3,{Rotation=180},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
-else
-ad(
-h,
-0.25,
-{Size=UDim2.new(0,aA,0,0)},
-Enum.EasingStyle.Quint,
-Enum.EasingDirection.Out
-):Play()
-ad(f,0.25,{Rotation=0},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
-end
-aB=not aB
-end)
-end
-
 local function handleSuccess(aA)
 al:Close()()
 writefile((ag.Folder or"Temp").."/"..ah..".key",tostring(aA))
@@ -3061,7 +2289,7 @@ Content="Invalid key.",
 Icon="triangle-alert",
 }
 end
-elseif not ag.KeySystem.API then
+else
 local b=type(ag.KeySystem.Key)=="table"and table.find(ag.KeySystem.Key,aA)
 or ag.KeySystem.Key==aA
 
@@ -3074,45 +2302,16 @@ task.wait(0.4)
 ai(true)
 end
 end
-else
-local b,d
-for f,g in next,am do
-local h,j=g.Verify(aA)
-if h then
-b,d=true,j
-break
-end
-d=j
-end
-
-if b then
-handleSuccess(aA)
-else
-ag.WindUI:Notify{
-Title="Key System. Error",
-Content=d,
-Icon="triangle-alert",
-}
-end
 end
 end,"Primary",ax)
 
 aA.AnchorPoint=Vector2.new(1,0.5)
 aA.Position=UDim2.new(1,0,0.5,0)
 
-
-
-
-
-
-
-
-
-
 al:Open()
 end
 
-return aa end function a.p()
+return aa end function a.j()
 
 
 
@@ -3134,7 +2333,7 @@ local ab=aa(game:GetService"Workspace").CurrentCamera.ViewportSize.Y
 return map(ab,0,2560,8,56)
 end
 
-return{viewportPointToWorld,getOffset}end function a.q()
+return{viewportPointToWorld,getOffset}end function a.k()
 
 
 
@@ -3145,7 +2344,7 @@ local ab=a.load'c'
 local ac=ab.New
 
 
-local ad,ae=unpack(a.load'p')
+local ad,ae=unpack(a.load'j')
 local af=Instance.new("Folder",aa(game:GetService"Workspace").CurrentCamera)
 
 
@@ -3281,11 +2480,11 @@ ah.Frame=ak
 ah.Model=aj
 
 return ah
-end end function a.r()
+end end function a.l()
 
 
 local aa=a.load'c'
-local ab=a.load'q'
+local ab=a.load'k'
 
 local ac=aa.New
 
@@ -3405,7 +2604,7 @@ ae.SetVisibility=af.SetVisibility
 end
 
 return ae,af
-end end function a.s()
+end end function a.m()
 
 
 
@@ -3413,9 +2612,9 @@ local aa=(cloneref or clonereference or function(aa)return aa end)
 
 
 local ab={
-AcrylicBlur=a.load'q',
+AcrylicBlur=a.load'k',
 
-AcrylicPaint=a.load'r',
+AcrylicPaint=a.load'l',
 }
 
 function ab.init()
@@ -3462,7 +2661,7 @@ registerDefaults()
 ab.Enable()
 end
 
-return ab end function a.t()
+return ab end function a.n()
 
 local aa={}
 
@@ -3483,7 +2682,7 @@ Buttons=ae.Buttons,
 IconSize=22,
 }
 
-local ah=a.load'n'
+local ah=a.load'h'
 local ai=ah.Create(true,"Popup",ae.WindUI.Window,ae.WindUI,af)
 
 local aj=200
@@ -3644,7 +2843,7 @@ PaddingBottom=UDim.new(0,16),
 }),
 })
 
-local as=a.load'l'.New
+local as=a.load'f'.New
 
 for at,au in next,ag.Buttons do
 as(au.Title,au.Icon,au.Callback,au.Variant,aq,ai)
@@ -3656,7 +2855,7 @@ ai:Open()
 return ag
 end
 
-return aa end function a.u()
+return aa end function a.o()
 return function(aa,ab)
 return{
 Dark={
@@ -4033,7 +3232,7 @@ Button=aa:Gradient({
 Icon=Color3.fromHex"#ffffff",
 },
 }
-end end function a.v()
+end end function a.p()
 
 local aa={}
 
@@ -4136,7 +3335,7 @@ al,
 return am
 end
 
-return aa end function a.w()
+return aa end function a.q()
 
 local aa={}
 
@@ -4313,7 +3512,7 @@ return ak
 end
 
 
-return aa end function a.x()
+return aa end function a.r()
 local aa={}
 
 local ab=a.load'c'
@@ -4478,7 +3677,7 @@ end)
 return ah
 end
 
-return aa end function a.y()
+return aa end function a.s()
 
 local aa=(cloneref or clonereference or function(aa)return aa end)
 
@@ -4859,7 +4058,7 @@ function ae.GetConfig(af,ag)
 return ae.Configs[ag]
 end
 
-return ae end function a.z()
+return ae end function a.t()
 local aa={}
 
 local ab=a.load'c'
@@ -5144,7 +4343,7 @@ end
 
 
 
-return aa end function a.A()
+return aa end function a.u()
 local aa={}
 
 local ab=a.load'c'
@@ -5306,7 +4505,7 @@ end
 
 
 
-return aa end function a.B()
+return aa end function a.v()
 game:GetService"ReplicatedStorage"
 local aa=a.load'c'
 local ab=aa.New
@@ -6038,14 +5237,14 @@ end
 
 
 return ag
-end end function a.C()
+end end function a.w()
 
 local aa=a.load'c'
 local ab=aa.New
 
 local ac={}
 
-local ad=a.load'l'.New
+local ad=a.load'f'.New
 
 function ac.New(ae,af)
 af.Hover=false
@@ -6060,7 +5259,7 @@ Desc=af.Desc or nil,
 
 Locked=af.Locked or false,
 }
-local ah=a.load'B'(af)
+local ah=a.load'v'(af)
 
 ag.ParagraphFrame=ah
 if af.Buttons and#af.Buttons>0 then
@@ -6095,7 +5294,7 @@ end
 return ag.__type,ag
 end
 
-return ac end function a.D()
+return ac end function a.x()
 
 local aa=a.load'c'local ab=
 aa.New
@@ -6120,7 +5319,7 @@ UIElements={}
 
 local ag=true
 
-af.ButtonFrame=a.load'B'{
+af.ButtonFrame=a.load'v'{
 Title=af.Title,
 Desc=af.Desc,
 Parent=ae.Parent,
@@ -6197,7 +5396,7 @@ end)
 return af.__type,af
 end
 
-return ac end function a.E()
+return ac end function a.y()
 local aa={}
 
 local ab=a.load'c'
@@ -6537,7 +5736,7 @@ end
 return ap,am
 end
 
-return aa end function a.F()
+return aa end function a.z()
 local aa={}
 
 local ab=a.load'c'local ac=
@@ -6637,13 +5836,13 @@ return an,ak
 end
 
 
-return aa end function a.G()
+return aa end function a.A()
 local aa=a.load'c'local ab=
 aa.New local ac=
 aa.Tween
 
-local ad=a.load'E'.New
-local ae=a.load'F'.New
+local ad=a.load'x'.New
+local ae=a.load'y'.New
 
 local af={}
 
@@ -6661,7 +5860,7 @@ Type=ah.Type or"Toggle",
 Callback=ah.Callback or function()end,
 UIElements={}
 }
-ai.ToggleFrame=a.load'B'{
+ai.ToggleFrame=a.load'v'{
 Title=ai.Title,
 Desc=ai.Desc,
 
@@ -6754,7 +5953,7 @@ end
 return ai.__type,ai
 end
 
-return af end function a.H()
+return af end function a.B()
 local aa=(cloneref or clonereference or function(aa)return aa end)
 
 
@@ -6857,7 +6056,7 @@ av.Size=UDim2.new(0,al.IconSize,0,al.IconSize)
 aw=aw+al.IconSize-2
 end
 end
-al.SliderFrame=a.load'B'{
+al.SliderFrame=a.load'v'{
 Title=al.Title,
 Desc=al.Desc,
 Parent=ak.Parent,
@@ -6958,7 +6157,7 @@ Visible=al.IsTextbox,
 
 local ax
 if al.IsTooltip then
-ax=a.load'A'.New(ap,al.UIElements.SliderIcon.Frame.Thumb,true,"Secondary","Small",false)
+ax=a.load'u'.New(ap,al.UIElements.SliderIcon.Frame.Thumb,true,"Secondary","Small",false)
 ax.Container.AnchorPoint=Vector2.new(0.5,1)
 ax.Container.Position=UDim2.new(0.5,0,0,-8)
 end
@@ -7107,7 +6306,7 @@ end)
 return al.__type,al
 end
 
-return ah end function a.I()
+return ah end function a.C()
 local aa=(cloneref or clonereference or function(aa)return aa end)
 
 local ac=aa(game:GetService"UserInputService")
@@ -7121,7 +6320,7 @@ UICorner=6,
 UIPadding=8,
 }
 
-local ah=a.load'v'.New
+local ah=a.load'p'.New
 
 function ag.New(ai,aj)
 local function NormalizeKeyCode(ak)
@@ -7149,7 +6348,7 @@ UIElements={},
 
 local al=true
 
-ak.KeybindFrame=a.load'B'{
+ak.KeybindFrame=a.load'v'{
 Title=ak.Title,
 Desc=ak.Desc,
 Parent=aj.Parent,
@@ -7268,7 +6467,7 @@ end)
 return ak.__type,ak
 end
 
-return ag end function a.J()
+return ag end function a.D()
 local aa=a.load'c'
 local ac=aa.New local ad=
 aa.Tween
@@ -7276,11 +6475,11 @@ aa.Tween
 local ae={
 UICorner=8,
 UIPadding=8,
-}local af=a.load'l'
+}local af=a.load'f'
 
 
 .New
-local ag=a.load'm'.New
+local ag=a.load'g'.New
 
 function ae.New(ah,ai)
 local aj={
@@ -7302,7 +6501,7 @@ Width=150,
 
 local ak=true
 
-aj.InputFrame=a.load'B'{
+aj.InputFrame=a.load'v'{
 Title=aj.Title,
 Desc=aj.Desc,
 Parent=ai.Parent,
@@ -7378,7 +6577,7 @@ end
 return aj.__type,aj
 end
 
-return ae end function a.K()
+return ae end function a.E()
 local aa=a.load'c'
 local ac=aa.New
 
@@ -7405,7 +6604,7 @@ ah
 return"Divider",{__type="Divider",ElementFrame=ai}
 end
 
-return ae end function a.L()
+return ae end function a.F()
 local aa={}
 
 local ac=(cloneref or clonereference or function(ac)
@@ -7418,7 +6617,7 @@ local ag=ac(game:GetService"Workspace").CurrentCamera
 
 local ah=workspace.CurrentCamera
 
-local ai=a.load'm'.New
+local ai=a.load'g'.New
 
 local aj=a.load'c'
 local ak=aj.New
@@ -7935,7 +7134,7 @@ end
 
 RecalculateCanvasSize()
 RecalculateListSize()
-else a.load'K'
+else a.load'E'
 :New{Parent=an.UIElements.Menu.Frame.ScrollingFrame}
 end
 end
@@ -8065,7 +7264,7 @@ UpdatePosition
 return ar
 end
 
-return aa end function a.M()
+return aa end function a.G()
 
 local aa=(cloneref or clonereference or function(aa)
 return aa
@@ -8079,9 +7278,9 @@ local ae=a.load'c'
 local af=ae.New local ag=
 ae.Tween
 
-local ah=a.load'v'.New local ai=a.load'm'
+local ah=a.load'p'.New local ai=a.load'g'
 .New
-local aj=a.load'L'.New local ak=
+local aj=a.load'F'.New local ak=
 
 workspace.CurrentCamera
 
@@ -8127,7 +7326,7 @@ end
 
 local ap=true
 
-ao.DropdownFrame=a.load'B'{
+ao.DropdownFrame=a.load'v'{
 Title=ao.Title,
 Desc=ao.Desc,
 Parent=an.Parent,
@@ -8158,7 +7357,7 @@ ao.UIElements.Dropdown.AnchorPoint=Vector2.new(1,an.Window.NewElements and 0 or 
 
 end
 
-ao.DropdownMenu=aj(an,ao,al,ap,"Dropdown")
+ao.DropdownMenu=aj(am,ao,al,ap,"Dropdown")
 
 ao.Display=ao.DropdownMenu.Display
 ao.Refresh=ao.DropdownMenu.Refresh
@@ -8198,7 +7397,7 @@ end
 return ao.__type,ao
 end
 
-return al end function a.N()
+return al end function a.H()
 
 
 
@@ -8241,7 +7440,7 @@ local_property=Color3.fromHex"#CBA6F7",
 local function createKeywordSet(ah)
 local aj={}
 for ak,al in ipairs(ah)do
-aj[al]=true
+aj[ak]=true
 end
 return aj
 end
@@ -8371,14 +7570,15 @@ end
 return table.concat(ar)
 end
 
-return aa end function a.O()
+return aa end function a.I()
+
 local aa={}
 
 local ae=a.load'c'
 local af=ae.New
 local ah=ae.Tween
 
-local aj=a.load'N'
+local aj=a.load'H'
 
 function aa.New(ak,al,am,an,ao)
 local ap={
@@ -8581,12 +7781,13 @@ return ap
 end
 
 
-return aa end function a.P()
+return aa end function a.J()
+
 local aa=a.load'c'local ae=
 aa.New
 
 
-local af=a.load'O'
+local af=a.load'I'
 
 local ah={}
 
@@ -8648,7 +7849,8 @@ al.ElementFrame=an.CodeFrame
 return al.__type,al
 end
 
-return ah end function a.Q()
+return ah end function a.K()
+
 local aa=a.load'c'
 local ae=aa.New local af=
 aa.Tween
@@ -8664,8 +7866,8 @@ local am=ak.RenderStepped
 local an=al.LocalPlayer
 local ao=an:GetMouse()
 
-local ap=a.load'l'.New
-local aq=a.load'm'.New
+local ap=a.load'f'.New
+local aq=a.load'g'.New
 
 local ar={
 UICorner=9,
@@ -8694,7 +7896,7 @@ end
 
 ax:SetHSVFromRGB(ax.Default)
 
-local ay=a.load'n'
+local ay=a.load'h'
 local az=ay.Create(nil,"Dialog",au,av,au.UIElements.Main.Main)
 
 ax.ColorpickerFrame=az
@@ -9299,7 +8501,7 @@ local av=true
 
 
 
-au.ColorpickerFrame=a.load'B'{
+au.ColorpickerFrame=a.load'v'{
 Title=au.Title,
 Desc=au.Desc,
 Parent=at.Parent,
@@ -9367,7 +8569,8 @@ end)
 return au.__type,au
 end
 
-return ar end function a.R()
+return ar end function a.L()
+
 local aa=a.load'c'
 local ae=aa.New
 local af=aa.Tween
@@ -9696,7 +8899,7 @@ end)
 return al.__type,al
 end
 
-return ah end function a.S()
+return ah end function a.M()
 
 local aa=a.load'c'
 local ae=aa.New
@@ -9713,7 +8916,8 @@ BackgroundTransparency=1,
 return"Space",{__type="Space",ElementFrame=ak}
 end
 
-return af end function a.T()
+return af end function a.N()
+
 local aa=a.load'c'
 local ae=aa.New
 
@@ -9782,7 +8986,8 @@ end
 return ak.__type,ak
 end
 
-return af end function a.U()
+return af end function a.O()
+
 local aa=a.load'c'
 local ae=aa.New
 
@@ -9867,7 +9072,8 @@ aj.Tab
 return ak.__type,ak
 end
 
-return af end function a.V()
+return af end function a.P()
+
 local aa=a.load'c'
 local ae=aa.New
 
@@ -9966,7 +9172,8 @@ end
 return ak.__type,ak
 end
 
-return af end function a.W()
+return af end function a.Q()
+
 local aa=a.load'c'
 local ae=aa.New
 
@@ -10052,25 +9259,26 @@ aj.Tab
 return ak.__type,ak
 end
 
-return af end function a.X()
+return af end function a.R()
+
 return{
 Elements={
-Paragraph=a.load'C',
-Button=a.load'D',
-Toggle=a.load'G',
-Slider=a.load'H',
-Keybind=a.load'I',
-Input=a.load'J',
-Dropdown=a.load'M',
-Code=a.load'P',
-Colorpicker=a.load'Q',
-Section=a.load'R',
-Divider=a.load'K',
-Space=a.load'S',
-Image=a.load'T',
-Group=a.load'U',
-HStack=a.load'V',
-VStack=a.load'W',
+Paragraph=a.load'w',
+Button=a.load'x',
+Toggle=a.load'A',
+Slider=a.load'B',
+Keybind=a.load'C',
+Input=a.load'D',
+Dropdown=a.load'G',
+Code=a.load'J',
+Colorpicker=a.load'L',
+Section=a.load'M',
+Divider=a.load'E',
+Space=a.load'N',
+Image=a.load'O',
+Group=a.load'P',
+HStack=a.load'Q',
+VStack=a.load'R',
 
 },
 Load=function(aa,ae,af,ah,aj,ak,al,am,an)
@@ -10195,7 +9403,7 @@ end
 end
 end
 end,
-}end function a.Y()
+}end function a.S()
 
 local aa=(cloneref or clonereference or function(aa)
 return aa
@@ -10209,8 +9417,8 @@ local af=ae.LocalPlayer:GetMouse()
 local ah=a.load'c'
 local aj=ah.New
 
-local ak=a.load'A'.New
-local al=a.load'w'.New
+local ak=a.load'u'.New
+local al=a.load'q'.New
 
 
 
@@ -10634,7 +9842,7 @@ end
 
 
 
-local ay=a.load'X'
+local ay=a.load'R'
 
 ay.Load(
 ap,
@@ -10831,7 +10039,7 @@ am.OnChangeFunc(ao)
 end
 end
 
-return am end function a.Z()
+return am end function a.T()
 
 local aa={}
 
@@ -10840,7 +10048,7 @@ local ae=a.load'c'
 local af=ae.New
 local ah=ae.Tween
 
-local aj=a.load'Y'
+local aj=a.load'S'
 
 function aa.New(ak,al,am,an,ao)
 local ap={
@@ -11009,7 +10217,7 @@ return ap
 end
 
 
-return aa end function a._()
+return aa end function a.U()
 return{
 Tab="table-of-contents",
 Paragraph="type",
@@ -11021,7 +10229,8 @@ Input="text-cursor-input",
 Dropdown="chevrons-up-down",
 Code="terminal",
 Colorpicker="palette",
-}end function a.aa()
+}end function a.V()
+
 local aa=(cloneref or clonereference or function(aa)
 return aa
 end)
@@ -11045,7 +10254,7 @@ Radius=22,
 Width=400,
 MaxHeight=380,
 
-Icons=a.load'_',
+Icons=a.load'U',
 }
 
 local ao=ah("TextBox",{
@@ -11556,7 +10765,7 @@ end)
 return an
 end
 
-return ae end function a.ab()
+return ae end function a.W()
 
 
 
@@ -11570,19 +10779,18 @@ local ah=aa(game:GetService"Players")
 
 local aj=workspace.CurrentCamera
 
-local ak=a.load's'
+local ak=a.load'm'
 
 local al=a.load'c'
 local am=al.New
 local an=al.Tween
 
 
-local ao=a.load'v'.New
-local ap=a.load'l'.New
-local aq=a.load'w'.New
-local ar=a.load'x'
+local ao=a.load'p'.New
+local ap=a.load'f'.New
+local aq=a.load'r'
 
-local as=a.load'y'
+local ar=a.load's'
 
 
 
@@ -11702,7 +10910,7 @@ CornerRadius=UDim.new(0,au.UICorner),
 })
 
 if au.Folder then
-au.ConfigManager=as:Init(au)
+au.ConfigManager=ar:Init(au)
 end
 
 if au.Acrylic then local
@@ -12636,7 +11844,7 @@ end
 
 
 
-au.OpenButtonMain=a.load'z'.New(au)
+au.OpenButtonMain=a.load't'.New(au)
 
 task.spawn(function()
 if au.Icon then
@@ -13155,8 +12363,8 @@ if au.OpenButton and typeof(au.OpenButton)=="table"then
 au:EditOpenButton(au.OpenButton)
 end
 
-local z=a.load'Y'
-local A=a.load'Z'
+local z=a.load'S'
+local A=a.load'T'
 local B=z.Init(au,at.WindUI,at.WindUI.TooltipGui)
 B:OnChange(function(C)
 au.CurrentTab=C
@@ -13230,7 +12438,7 @@ F,
 return G
 end
 
-local C=a.load'n'
+local C=a.load'h'
 function au.Dialog(F,G)
 local H={
 Title=G.Title or"Dialog",
@@ -13594,7 +12802,7 @@ end)
 
 
 if not au.HideSearchBar then
-local M=a.load'aa'
+local M=a.load'V'
 local N=false
 
 
@@ -13701,7 +12909,7 @@ UIScale=1,
 ConfigManager=nil,
 Version="0.0.0",
 
-Services=a.load'j',
+Services=nil,
 
 OnThemeChangeFunction=nil,
 
@@ -13727,7 +12935,7 @@ if am then
 aa.Version=am.version
 end
 
-local an=a.load'o'
+local an=a.load'i'
 
 local ao=aa.Creator
 
@@ -13736,7 +12944,7 @@ local ap=ao.New
 
 
 
-local aq=a.load's'
+local aq=a.load'n'
 
 local ar=protectgui or(syn and syn.protect_gui)or function()end
 
@@ -13938,10 +13146,10 @@ end
 
 function aa.Popup(av,aw)
 aw.WindUI=aa
-return a.load't'.new(aw,aa.ScreenGui.Popups)
+return a.load'n'.new(aw,aa.ScreenGui.Popups)
 end
 
-aa.Themes=a.load'u'(aa,ao)
+aa.Themes=a.load'o'(aa,ao)
 
 ao.Themes=aa.Themes
 
@@ -13949,7 +13157,7 @@ aa:SetTheme"Dark"
 aa:SetLanguage(ao.Language)
 
 function aa.CreateWindow(av,aw)
-local ax=a.load'ab'
+local ax=a.load'W'
 
 if not ak:IsStudio()and writefile then
 if not isfolder"WindUI"then
@@ -13978,86 +13186,6 @@ local az=aa.Themes[aw.Theme or"Dark"]
 
 ao.SetTheme(az)
 
-local aA=gethwid or function()
-return ah.LocalPlayer.UserId
-end
-
-local aB=aA()
-
-if aw.KeySystem then
-ay=false
-
-local function loadKeysystem()
-an.new(aw,aB,function(b)
-ay=b
-end)
-end
-
-local b=(aw.Folder or"Temp").."/"..aB..".key"
-
-if aw.KeySystem.KeyValidator then
-if aw.KeySystem.SaveKey and isfile(b)then
-local d=readfile(b)
-local f=aw.KeySystem.KeyValidator(d)
-
-if f then
-ay=true
-else
-loadKeysystem()
-end
-else
-loadKeysystem()
-end
-elseif not aw.KeySystem.API then
-if aw.KeySystem.SaveKey and isfile(b)then
-local d=readfile(b)
-local f=(type(aw.KeySystem.Key)=="table")and table.find(aw.KeySystem.Key,d)
-or tostring(aw.KeySystem.Key)==tostring(d)
-
-if f then
-ay=true
-else
-loadKeysystem()
-end
-else
-loadKeysystem()
-end
-else
-if isfile(b)then
-local d=readfile(b)
-local f=false
-
-for g,h in next,aw.KeySystem.API do
-local j=aa.Services[h.Type]
-if j then
-local l={}
-for m,p in next,j.Args do
-table.insert(l,h[p])
-end
-
-local m=j.New(table.unpack(l))
-local p=m.Verify(d)
-if p then
-f=true
-break
-end
-end
-end
-
-ay=f
-if not f then
-loadKeysystem()
-end
-else
-loadKeysystem()
-end
-end
-
-repeat
-task.wait()
-until ay
-end
-
 local b=ax(aw)
 
 aa.Transparent=aw.Transparent
@@ -14066,18 +13194,6 @@ aa.Window=b
 if aw.Acrylic then
 aq.init()
 end
-
-
-
-
-
-
-
-
-
-
-
-
 
 return b
 end
