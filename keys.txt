@@ -1,0 +1,5 @@
+{
+  "KEYS": {
+    "BINDEV_YFLV0UZO2I_1783133038": { "hwid": "", "status": "active" }
+  }
+}
