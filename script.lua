@@ -1,5 +1,5 @@
--- Global Team Configuration
-getgenv().team = getgenv().team or "Pirates" -- Options: "Pirates" , "Marines"
+-- fix
+getgenv().team = getgenv().team or "Pirates" -- "Pirates" or "Marines"
 
 -- Auto-Join Team Logic
 local function AutoJoinTeam()
@@ -34,7 +34,7 @@ local HttpService = game:GetService("HttpService")
 
 local LocalPlayer = Players.LocalPlayer
 
--- Configuration Persistence Engine
+-- Persistence File Engine
 local ConfigFile = "binxdev_chest_config.json"
 
 local DefaultConfig = {
@@ -55,7 +55,7 @@ end
 local function LoadSettings()
     if readfile and isfile and isfile(ConfigFile) then
         local success, result = pcall(function()
-            return HttpService:JSONDecode(readfile(ConfigFile))
+            return HttpService:JSONEncode(readfile(ConfigFile))
         end)
         if success and type(result) == "table" then
             return result
@@ -68,30 +68,30 @@ local State = LoadSettings()
 getgenv().team = State.Team or getgenv().team
 
 -- Queue Script Re-Execution Across Server Hop
-local function QueueScriptOnTeleport()
-    local queueFunction = queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport)
+local function QueueAutoExec()
+    local queueFunction = queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport) or (queue_for_teleport)
     if queueFunction then
-        local autoExecScript = string.format([[
+        -- Passes execution payload to the new server instance
+        local reExecPayload = string.format([[
+            repeat task.wait() until game:IsLoaded()
             getgenv().team = "%s"
-            task.wait(3)
-            loadstring(game:HttpGet("https://sirius.menu/rayfield"))()
+            -- Insert raw script URL or local loader here if hosted externally
+            print("[binxdev] Auto-reloaded script on new server, boss man.")
         ]], getgenv().team)
         
-        -- Note: Replace URL below with your raw GitHub/Gist script link if hosting externally
-        queueFunction([[
-            getgenv().team = "]] .. getgenv().team .. [["
-            print("[binxdev] Auto-reloaded script after server hop, boss man.")
-        ]])
+        pcall(function()
+            queueFunction(reExecPayload)
+        end)
     end
 end
 
 -- Load Rayfield UI Library
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
--- Movement Handle
+-- Active Flight Handle
 local CurrentTween = nil
 
--- UI Setup
+-- UI Window Setup
 local Window = Rayfield:CreateWindow({
     Name = "binxdev | Chest Collector Pro",
     LoadingTitle = "binxdev Framework",
@@ -104,7 +104,7 @@ local Window = Rayfield:CreateWindow({
 local MainTab = Window:CreateTab("Auto Farm", 4483362458)
 local ConfigTab = Window:CreateTab("Settings", 4483362458)
 
--- Helper: Retrieve Character Root
+-- Helper Functions
 local function GetRoot()
     local char = LocalPlayer.Character
     if char and char:FindFirstChild("HumanoidRootPart") then
@@ -113,7 +113,6 @@ local function GetRoot()
     return nil
 end
 
--- Helper: Count Remaining Chests
 local function GetChests()
     local chestModels = Workspace:FindFirstChild("ChestModels")
     if not chestModels then return {} end
@@ -127,7 +126,7 @@ local function GetChests()
     return validChests
 end
 
--- Movement Engine: Instant Teleport
+-- Movement Systems
 local function TeleportTo(targetCFrame)
     local root = GetRoot()
     if root then
@@ -135,7 +134,6 @@ local function TeleportTo(targetCFrame)
     end
 end
 
--- Movement Engine: Smooth Fly (TweenService)
 local function FlyTo(targetCFrame)
     local root = GetRoot()
     if not root then return false end
@@ -163,14 +161,14 @@ local function FlyTo(targetCFrame)
     return true
 end
 
--- Server Hop Engine
+-- Server Hop Logic
 local function HopServer()
     SaveSettings(State)
-    QueueScriptOnTeleport()
+    QueueAutoExec()
 
     Rayfield:Notify({
         Title = "Server Hop",
-        Content = "Hopping server & saving config, boss man...",
+        Content = "Saving config & hopping to a new server, boss man...",
         Duration = 5,
         Image = 4483362458,
     })
@@ -196,7 +194,7 @@ local function HopServer()
     TeleportService:Teleport(placeId, LocalPlayer)
 end
 
--- Primary Execution Loop
+-- Main Execution Loop
 task.spawn(function()
     while true do
         task.wait(0.5)
@@ -241,7 +239,7 @@ task.spawn(function()
     end
 end)
 
--- Main Controls UI
+-- Interface Controls
 MainTab:CreateToggle({
     Name = "Enable Auto Chest Farm",
     CurrentValue = State.AutoFarm,
@@ -291,7 +289,6 @@ MainTab:CreateToggle({
     end,
 })
 
--- Configuration Settings Controls
 ConfigTab:CreateSlider({
     Name = "Fly Speed (Studs/sec)",
     Range = {30, 350},
@@ -325,10 +322,10 @@ ConfigTab:CreateButton({
     end,
 })
 
--- Notification
+-- On Boot UI Notification
 Rayfield:Notify({
     Title = "binxdev Chest Pro",
-    Content = "Settings restored. Team set to " .. getgenv().team .. ", boss man.",
+    Content = "Script loaded. Press K to toggle UI visibility, boss man.",
     Duration = 5,
     Image = 4483362458,
 })
