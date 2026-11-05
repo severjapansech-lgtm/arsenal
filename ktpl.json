@@ -1,0 +1,3525 @@
+{
+  "success": true,
+  "questions": [
+    {
+      "_id": "6adefb6bb25ca7ac0194e409",
+      "type": "COMPREHENSION",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "COMPREHENSION",
+        "marks": {
+          "correct": 0,
+          "incorrect": 0
+        },
+        "options": [],
+        "queries": [
+          {
+            "_id": "6adefb6ba8f944a312ae95ee",
+            "hasMath": false,
+            "math": {
+              "latex": [],
+              "template": null
+            },
+            "media": [],
+            "text": "Trong những tháng đầu năm 2024, giá thanh long có nhiều biến động, nhiều hộ gia đình ở huyện T phá bỏ vườn thanh long ruột trắng để trồng thanh long ruột đỏ do có giá cao hơn, dao động từ 2.000đ - 3.000đ/1kg.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9614",
+            "hasMath": false,
+            "math": {
+              "latex": [],
+              "template": null
+            },
+            "media": [],
+            "text": "Trên địa bàn huyện X, gia đình anh H và chị D, do kinh tế khó khăn, anh H quyết định đưa cả gia đình về quê sinh sống. Sau khi tìm hiểu một số công ty, anh H quyết định nộp hồ sơ xin việc vào một số công ty trên địa bàn. Chị D vốn là giáo viên mầm non, sau khi chuyển về quê, chị xin vào làm tạp vụ tại một cơ sở sản xuất, kinh doanh với mức lương thấp nên chị chưa muốn đi làm. Bố của anh là ông K năm nay 55 tuổi, đã làm cho một công ty sản xuất ô tô gần 30 năm. Vì có trình độ tay nghề cao nên khi doanh nghiệp tái cơ cấu, ông K tiếp tục làm việc đến khi về hưu. Em trai anh H là anh Y là kỹ sư công nghệ thông tin cho một công ty có vốn nước ngoài.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "_id": "6adefb6ba8f944a312ae95ee",
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Trong những tháng đầu năm 2024, giá thanh long có nhiều biến động, nhiều hộ gia đình ở huyện T phá bỏ vườn thanh long ruột trắng để trồng thanh long ruột đỏ do có giá cao hơn, dao động từ 2.000đ - 3.000đ/1kg.",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": false
+        },
+        "correctAnswers": []
+      },
+      "createdAt": "2026-10-26T07:04:11.972Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 3,
+      "time": 60000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionIds": [
+        "6adefb6c4ed551f11173ae6a",
+        "6adefb6c4ed551f11173ae6b",
+        "6adefb6c4ed551f11173ae6c",
+        "6adefb6c4ed551f11173ae6d",
+        "6adefb6c4ed551f11173ae6e",
+        "6adefb6c4ed551f11173ae6f",
+        "6adefb6c4ed551f11173ae70",
+        "6adefb6c4ed551f11173ae71",
+        "6adefb6c4ed551f11173ae72",
+        "6adefb6c4ed551f11173ae73",
+        "6adefb6c4ed551f11173ae74",
+        "6adefb6c4ed551f11173ae75",
+        "6adefb6c4ed551f11173ae76"
+      ],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e40c",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae960d",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae960d",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp cơ cấu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae960e",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae960e",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp tạm thời.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae960f",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae960f",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp chu kì.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9610",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9610",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp thời vụ.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Người lao động không có việc làm trong thời gian chuyển đổi giữa các công việc thuộc loại hình thất nghiệp nào sau đây?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae960e",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae960e",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp tạm thời.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e40a",
+      "type": "COMPREHENSION",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "COMPREHENSION",
+        "marks": {
+          "correct": 0,
+          "incorrect": 0
+        },
+        "options": [],
+        "query": {
+          "_id": "6adefb6ba8f944a312ae9622",
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Sau khi tốt nghiệp Trường Đại học Xây dựng B, anh T được tuyển dụng vào làm việc tại một công ty xây dựng với mức lương 15 triệu đồng/tháng. Để có thêm thu nhập cho gia đình và trang trải cuộc sống, vợ anh cũng tham gia hoạt động lao động, chị mở một cửa hàng bán quần áo, lợi nhuận trung bình 10 triệu đồng/tháng. Khoản thu nhập hợp pháp từ tiền lương và cửa hàng đã giúp gia đình anh T có cuộc sống ổn định.",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": false
+        },
+        "correctAnswers": []
+      },
+      "createdAt": "2026-10-26T07:04:11.972Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 3,
+      "time": 60000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionIds": [
+        "6adefb6c24c4b8ea8149f273",
+        "6adefb6c24c4b8ea8149f274"
+      ],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e40d",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae962f",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae962f",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cạnh tranh kinh tế.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9630",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9630",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Đấu tranh.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9631",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9631",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Sản xuất.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9632",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9632",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Kinh doanh.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Sự tranh đua giữa các chủ thể kinh tế nhằm có được những ưu thế trong sản xuất, tiêu thụ hàng hoá, qua đó thu được lợi ích tối đa thể hiện nội dung của khái niệm nào dưới đây?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae962f",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae962f",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cạnh tranh kinh tế.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e40e",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9635",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9635",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giành ảnh hưởng trong xã hội.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9636",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9636",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giành uy tín tuyệt đối cho doanh nghiệp mình.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9637",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9637",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giành lợi nhuận tối đa về mình.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9638",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9638",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giành phục vụ lợi ích cho xã hội.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Mục đích cuối cùng của cạnh tranh là",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9637",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9637",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giành lợi nhuận tối đa về mình.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e40f",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae963b",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae963b",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cạnh tranh tự do.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae963c",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae963c",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cạnh tranh ganh đua.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae963d",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae963d",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cạnh tranh không lành mạnh.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae963e",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae963e",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cạnh tranh không trung thực.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Doanh nghiệp A tung tin đồn không đúng, không trung thực về doanh nghiệp B để hạ uy tín doanh nghiệp B. Hành vi của doanh nghiệp A thuộc loại cạnh tranh nào dưới đây?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae963d",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae963d",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cạnh tranh không lành mạnh.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e410",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9641",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9641",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh G và anh H.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9642",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9642",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh D và anh T.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9643",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9643",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh D và anh G.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9644",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9644",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh G, anh H và anh T.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Anh D và anh G cùng kinh doanh mặt hàng gas tại địa bàn thị trấn X. Cho rằng việc anh D thường xuyên khuyến mãi, tiếp thị sản phẩm, và nhận sửa chữa bếp gas miễn phí cho khách hàng mua gas của mình là hành vi cố tình tranh giành khách của mình nên anh G đã thuê anh T, một đối tượng xã hội đen trong vùng, đến đập phá, đe dọa và uy hiếp những gia đình đã mua hàng của anh D, đồng thời nhập gas từ chỗ anh H với giá rẻ hơn các cơ sở khác do anh H mua được một số lượng lớn vỏ bình gas đã qua sử dụng về cải tạo và tự sang chiết gas. Trong trường hợp này những ai đã có hành vi cạnh tranh không lành mạnh?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9644",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9644",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh G, anh H và anh T.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e411",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9647",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9647",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "độc quyền.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9648",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9648",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cung.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9649",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9649",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cầu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae964a",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae964a",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "sản xuất.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Lượng hàng hóa, dịch vụ mà người tiêu dùng sẵn sàng mua với một mức giá nhất định trong một khoảng thời gian xác định được gọi là",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9649",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9649",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cầu.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e412",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae964d",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae964d",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "độc quyền.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae964e",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae964e",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cung.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae964f",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae964f",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cầu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9650",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9650",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "sản xuất.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Lượng hàng hóa, dịch vụ mà nhà cung cấp sẵn sàng đáp ứng cho nhu cầu của thị trường với mức giá được xác định trong khoảng thời gian nhất định được gọi là",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae964e",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae964e",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cung.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e413",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9653",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9653",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung tăng.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9654",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9654",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung < cầu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9655",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9655",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung = cầu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9656",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9656",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung > cầu.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Trong sản xuất và lưu thông hàng hóa, doanh nghiệp A quyết định mở rộng sản xuất, kinh doanh trong trường hợp nào dưới đây?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9654",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9654",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung < cầu.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e414",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9659",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9659",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung nhỏ hơn cầu, thu hẹp sản xuất.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae965a",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae965a",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung nhỏ hơn cầu, mở rộng sản xuất.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae965b",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae965b",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung lớn hơn cầu, mở rộng sản xuất.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae965c",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae965c",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung lớn hơn cầu, thu hẹp sản xuất.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Khi đại dịch viêm đường hô hấp cấp chủng mới Covid-19 xuất hiện. Bộ Y tế khuyến cáo mọi người dân nên đeo khẩu trang để bảo vệ mình và cộng đồng nên nhu cầu về khẩu trang tăng cao. Doanh nghiệp A đã mở rộng sản xuất để đáp ứng kịp thời sức mua của người dân. Doanh nghiệp A đã vận dụng vai trò nào dưới đây của quan hệ cung cầu?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae965a",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae965a",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung nhỏ hơn cầu, mở rộng sản xuất.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e415",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae965f",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae965f",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thất nghiệp.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9660",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9660",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "sa thải.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9661",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9661",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giải nghệ.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9662",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9662",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "bỏ việc.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Tình trạng người lao động mong muốn có việc làm nhưng chưa tìm được việc làm được gọi là",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae965f",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae965f",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thất nghiệp.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e416",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9665",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9665",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thất nghiệp tạm thời.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9666",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9666",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thất nghiệp cơ cấu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9667",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9667",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thất nghiệp chu kì.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9668",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9668",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thất nghiệp tự nguyện.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Tình trạng thất nghiệp xuất hiện khi người lao động thay đổi công việc hoặc chỗ ở,… chưa tìm được việc làm mới được gọi là",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9665",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9665",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thất nghiệp tạm thời.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e417",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae966b",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae966b",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp tạm thời.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae966c",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae966c",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp cơ cấu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae966d",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae966d",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp chu kì.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae966e",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae966e",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp tự nguyện.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Xác định loại hình thất nghiệp được đề cập đến trong trường hợp sau: Doanh nghiệp A tạm ngưng sản xuất do thiếu đơn hàng, chị P phải nghỉ việc và không tìm được việc làm khác trong tình hình kinh tế thành phố đang đình trệ. Chị mong chờ doanh nghiệp A hồi phục sản xuất, tuyển dụng lại lao động tạm nghỉ việc để chị lại có được việc làm như trước.",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae966d",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae966d",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thất nghiệp chu kì.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e40b",
+      "type": "COMPREHENSION",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "COMPREHENSION",
+        "marks": {
+          "correct": 0,
+          "incorrect": 0
+        },
+        "options": [],
+        "query": {
+          "_id": "6adefb6ba8f944a312ae9672",
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Năm 1985, Việt Nam tiến hành đổi tiền theo Quyết định số 01/HDBT-TD ngày 13/9/1985. Sau cuộc đổi tiền, nền kinh tế rơi vào tình trạng lạm phát tăng cao: CPI năm 1986 tăng lên 114,7%, năm 1987 là 323,1%, năm 1988 là 393%.",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": false
+        },
+        "correctAnswers": []
+      },
+      "createdAt": "2026-10-26T07:04:11.972Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 3,
+      "time": 60000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionIds": [
+        "6adefb6c47e9fdc08796af4f",
+        "6adefb6c47e9fdc08796af50",
+        "6adefb6c47e9fdc08796af51"
+      ],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e418",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9685",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9685",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thị trường lao động",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9686",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9686",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thị trường tài chính",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9687",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9687",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thị trường tiền tệ",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9688",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9688",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thị trường công nghệ",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Là sự thỏa thuận giữa người bán sức lao động và người mua sức lao động về tiền công, tiền lương và các điều kiện làm việc khác là nội dung của khái niệm",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9685",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9685",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thị trường lao động",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6bb25ca7ac0194e419",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae968b",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae968b",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "thất nghiệp",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae968c",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae968c",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lao động",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae968d",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae968d",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "việc làm",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae968e",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae968e",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "sức lao động",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Những hoạt động lao động tạo ra thu nhập mà pháp luật không cấm là nội dung của khái niệm",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae968d",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae968d",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "việc làm",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.057Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae6a",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae95c9",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95c9",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "phát triển.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95ca",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95ca",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "tranh giành.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95cb",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95cb",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cạnh tranh.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95cc",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95cc",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "đấu tranh.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Các hãng xe đua nhau tung ra các mẫu xe máy điện mới với thiết kế đa dạng và tính năng hiện đại để thu được nhiều lợi nhuận là thể hiện sự",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae95cb",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95cb",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cạnh tranh.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae6b",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae95cf",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95cf",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Đẩy mạnh nguồn vốn đầu tư.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95d0",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95d0",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Phát triển kinh tế quốc dân.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95d1",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95d1",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thu lợi nhuận cho người kinh doanh.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95d2",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95d2",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Tăng cường sử dụng nguồn nhiên liệu.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Trong sản xuất và lưu thông hàng hóa, các nhà sản xuất đua nhau tung ra những mẫu xe máy điện chất lượng cao nhằm mục đích:",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae95d1",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95d1",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Thu lợi nhuận cho người kinh doanh.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae6c",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae95d5",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95d5",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lành mạnh.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95d6",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95d6",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "tự do.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95d7",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95d7",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "hợp lí.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95d8",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95d8",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "trung thực.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Cạnh tranh diễn ra theo đúng pháp luật và gắn liền với mặt tích cực là cạnh tranh",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae95d5",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95d5",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lành mạnh.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.202Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae6d",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae95db",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95db",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh K, ông H và anh D.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95dc",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95dc",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Ông H và anh D.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95dd",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95dd",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh K và chị T.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95de",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95de",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Ông H, anh D và chị T.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Do nhu cầu về bánh trung thu của người tiêu dùng tăng lên vào dịp Tết Trung thu nên anh K đã đầu tư vào sản xuất bánh trung thu để bán, còn chị T thì thu mua bánh trung thu kém chất lượng và bán với giá rất rẻ. Gần đó, ông H và anh D cũng hùn vốn để thu mua toàn bộ bánh trung thu của các cửa hàng nhưng không bán ra thị trường mà để trong nhà chờ giá cao mới bán. Theo em, ai đã có hành vi cạnh tranh không lành mạnh?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae95de",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95de",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Ông H, anh D và chị T.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae6e",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae95e1",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95e1",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung giảm.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95e2",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95e2",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung < cầu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95e3",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95e3",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung = cầu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95e4",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95e4",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung > cầu.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Trong sản xuất và lưu thông hàng hóa, doanh nghiệp A quyết định thu hẹp sản xuất, kinh doanh trong trường hợp nào dưới đây?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae95e4",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95e4",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung > cầu.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae6f",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae95e7",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95e7",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "tăng lên.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95e8",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95e8",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "biến động.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95e9",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95e9",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giảm xuống.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95ea",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95ea",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "ổn định.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Trong sản xuất và lưu thông hàng hóa, khi cung bằng cầu sẽ dẫn đến giá",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae95ea",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95ea",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "ổn định.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae70",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae95ef",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95ef",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung – cầu tác động lẫn nhau.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95f0",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95f0",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung – cầu ảnh hưởng đến giá cả thị trường.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95f1",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95f1",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Giá cả ảnh hưởng đến cung – cầu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95f2",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95f2",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung lớn hơn cầu làm cho giá giảm.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Đọc thông tin trong passage và trả lời: Việc chuyển đổi cây trồng thanh long là biểu hiện nào trong nội dung quan hệ cung - cầu?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae95f1",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95f1",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Giá cả ảnh hưởng đến cung – cầu.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae71",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae95f5",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95f5",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung tăng.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95f6",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95f6",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung giảm.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95f7",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95f7",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cầu tăng.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95f8",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95f8",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Giá giảm.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Đọc thông tin trong passage và trả lời: Người nông dân trồng thanh long ruột đỏ nhiều sẽ dẫn đến điều gì sau đây?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae95f5",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95f5",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Cung tăng.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae72",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae95fb",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95fb",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lạm phát vừa phải.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95fc",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95fc",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lạm phát phi mã.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95fd",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95fd",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "siêu lạm phát.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae95fe",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95fe",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lạm phát tuyệt đối.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Trong nền kinh tế, khi mức độ tăng lên của giá cả từ 0% đến dưới 10% khi đó nền kinh tế có mức độ",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae95fb",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae95fb",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lạm phát vừa phải.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae73",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9601",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9601",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lạm phát làm giảm thu nhập thực tế của người lao động.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9602",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9602",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lạm phát gia tăng tình trạng phân hóa giàu - nghèo.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9603",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9603",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lạm phát làm tăng thu nhập thực tế của người lao động.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9604",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9604",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lạm phát làm gia tăng tình trạng thất nghiệp và nghèo đói.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Phát biểu nào dưới đây không đúng khi nói về hậu quả của lạm phát?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9603",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9603",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lạm phát làm tăng thu nhập thực tế của người lao động.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae74",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9607",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9607",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lạm phát.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9608",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9608",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giảm phát.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9609",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9609",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cạnh tranh.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae960a",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae960a",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "đấu tranh.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Sự tăng mức giá chung các hàng hóa, dịch vụ của nền kinh tế (thường tính bằng chỉ số giá tiêu dùng CPI) một cách liên tục trong một thời gian nhất định là nội dung của khái niệm",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9607",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9607",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lạm phát.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae75",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9615",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9615",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh H, chị D.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9616",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9616",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Ông K, anh H.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9617",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9617",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh Y, anh H, ông K.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9618",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9618",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Chị D, ông K, anh H.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Những ai dưới đây đang ở trong tình trạng thất nghiệp?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9615",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9615",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Anh H, chị D.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c4ed551f11173ae76",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae961b",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae961b",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "tự nguyện.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae961c",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae961c",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cơ cấu.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae961d",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae961d",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "tạm thời.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae961e",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae961e",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "chu kì.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Tình trạng thất nghiệp của chị D được gọi là thất nghiệp",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae961b",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae961b",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "tự nguyện.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.136Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e409",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c24c4b8ea8149f273",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9623",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9623",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "lao động.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9624",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9624",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "việc làm.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9625",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9625",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giao tiếp.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9626",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9626",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "kết hợp.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Việc anh T được tuyển dụng vào làm việc tại một công ty xây dựng với mức lương 15 triệu đồng/tháng được gọi là",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9624",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9624",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "việc làm.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.184Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e40a",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c24c4b8ea8149f274",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9629",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9629",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lao động.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae962a",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae962a",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Việc làm.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae962b",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae962b",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Công ty.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae962c",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae962c",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Tập đoàn.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Vợ anh T mở cửa hàng bán quần áo mang lại lợi nhuận trung bình 10 triệu đồng/tháng được gọi là gì?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae962a",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae962a",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Việc làm.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.184Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e40a",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c47e9fdc08796af4f",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9673",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9673",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lạm phát nghiêm trọng.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9674",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9674",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Siêu lạm phát.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9675",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9675",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lạm phát vừa phải.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9676",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9676",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lạm phát phi mã.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Lạm phát ở Việt Nam trong giai đoạn 1986 - 1988 thuộc loại lạm phát nào dưới đây?",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9676",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9676",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "Lạm phát phi mã.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.225Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e40b",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c47e9fdc08796af50",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae9679",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9679",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "giữ nguyên giá trị vốn có.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae967a",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae967a",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "mất giá một cách nhanh chóng.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae967b",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae967b",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "không bị ảnh hưởng gì.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae967c",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae967c",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "bị khủng hoảng nghiêm trọng.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Trong nền kinh tế, lạm phát phi mã sẽ làm cho đồng tiền",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae967a",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae967a",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "mất giá một cách nhanh chóng.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.225Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e40b",
+      "state": "inactive",
+      "attempt": 0
+    },
+    {
+      "_id": "6adefb6c47e9fdc08796af51",
+      "type": "MCQ",
+      "structure": {
+        "explain": {},
+        "hasMath": false,
+        "hints": [],
+        "kind": "MCQ",
+        "marks": {
+          "correct": 1,
+          "incorrect": 0
+        },
+        "options": [
+          {
+            "_id": "6adefb6ba8f944a312ae967f",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae967f",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "tỷ lệ thuận.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9680",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9680",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "tỷ lệ nghịch.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9681",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9681",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "cân bằng.",
+            "type": "text"
+          },
+          {
+            "_id": "6adefb6ba8f944a312ae9682",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9682",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "độc lập.",
+            "type": "text"
+          }
+        ],
+        "query": {
+          "answerTime": 0,
+          "hasMath": false,
+          "math": {
+            "latex": []
+          },
+          "media": [],
+          "text": "Trong nền kinh tế, mối quan hệ giữa mức tăng của lạm phát với giá trị của đồng tiền là",
+          "type": "text"
+        },
+        "settings": {
+          "canSubmitCustomResponse": false,
+          "doesOptionHaveMultipleTargets": false,
+          "fibDataType": "string",
+          "hasCorrectAnswer": true,
+          "showAdvancedRTE": false
+        },
+        "correctAnswers": [
+          {
+            "_id": "6adefb6ba8f944a312ae9680",
+            "answerTime": 0,
+            "hasMath": false,
+            "id": "6adefb6ba8f944a312ae9680",
+            "math": {
+              "latex": []
+            },
+            "media": [],
+            "text": "tỷ lệ nghịch.",
+            "type": "text"
+          }
+        ]
+      },
+      "createdAt": "2026-10-26T07:04:12.225Z",
+      "updated": "2026-10-26T07:05:35.203Z",
+      "cloned": null,
+      "ver": 2,
+      "time": 30000,
+      "topics": [],
+      "unifiedStandardIds": [],
+      "comprehensionQuestionId": "6adefb6bb25ca7ac0194e40b",
+      "state": "inactive",
+      "attempt": 0
+    }
+  ]
+}
